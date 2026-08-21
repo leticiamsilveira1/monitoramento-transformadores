@@ -19,7 +19,7 @@ ARQ_LEIT = os.path.join(DATA_DIR, "leituras.csv")
 GASES_PADRAO = ["Hidrogênio", "Metano", "Acetileno", "Etileno", "Etano", "Monóxido de Carbono", "Dióxido de Carbono"]
 
 # ============================================================
-# SUPABASE — PERSISTÊNCIA DOS DADOS DGA
+# SUPABASE — PERSISTÊNCIA DOS DADOS
 # ============================================================
 def obter_config_supabase():
     try:
@@ -29,7 +29,8 @@ def obter_config_supabase():
 
 
 SUPABASE_URL, SUPABASE_ANON_KEY = obter_config_supabase()
-SUPABASE_TABELA = "leituras_dga"
+SUPABASE_TABELA_LEITURAS = "leituras_dga"
+SUPABASE_TABELA_EQUIPAMENTOS = "equipamentos"
 
 
 def supabase_configurado():
@@ -40,12 +41,79 @@ def supabase_headers():
     return {"apikey": SUPABASE_ANON_KEY, "Authorization": f"Bearer {SUPABASE_ANON_KEY}", "Content-Type": "application/json"}
 
 
-def supabase_endpoint():
-    return f"{SUPABASE_URL.rstrip('/')}/rest/v1/{SUPABASE_TABELA}"
+def supabase_endpoint(tabela):
+    return f"{SUPABASE_URL.rstrip('/')}/rest/v1/{tabela}"
 
 
+# ------------------------- EQUIPAMENTOS ----------------------
+def supabase_obter_equipamentos():
+    resposta = requests.get(
+        supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS),
+        headers=supabase_headers(),
+        params={"select": "*", "order": "id.asc", "limit": 1000},
+        timeout=20,
+    )
+    resposta.raise_for_status()
+    df = pd.DataFrame(resposta.json())
+    if df.empty:
+        return pd.DataFrame(columns=["id", "created_at", "id_transformador", "fabricante", "ano_fabricacao", "potencia_kva", "tensao_kv", "volume_oleo", "ativo"])
+    if "ativo" not in df.columns:
+        df["ativo"] = True
+    df["ativo"] = df["ativo"].fillna(True).astype(bool)
+    return df
+
+
+def supabase_inserir_equipamento(registro):
+    dados = {
+        "id_transformador": str(registro["id_transformador"]),
+        "fabricante": str(registro["fabricante"]),
+        "ano_fabricacao": int(registro["ano_fabricacao"]),
+        "potencia_kva": float(registro["potencia_kva"]),
+        "tensao_kv": float(registro["tensao_kv"]),
+        "volume_oleo": float(registro["volume_oleo"]),
+        "ativo": bool(registro.get("ativo", True)),
+    }
+    resposta = requests.post(
+        supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS),
+        headers={**supabase_headers(), "Prefer": "return=representation"},
+        json=dados,
+        timeout=30,
+    )
+    resposta.raise_for_status()
+    return resposta.json()
+
+
+def supabase_atualizar_equipamento_ativo(equipamento_id, ativo):
+    resposta = requests.patch(
+        supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS),
+        headers={**supabase_headers(), "Prefer": "return=representation"},
+        params={"id": f"eq.{int(equipamento_id)}"},
+        json={"ativo": bool(ativo)},
+        timeout=20,
+    )
+    resposta.raise_for_status()
+    return resposta.json()
+
+
+def carregar_equipamentos():
+    if supabase_configurado():
+        try:
+            return supabase_obter_equipamentos()
+        except requests.RequestException as erro:
+            st.error(f"Não foi possível acessar os equipamentos no Supabase: {erro}")
+            return pd.DataFrame()
+    try:
+        df = pd.read_csv(ARQ_EQUIP)
+        if "ativo" not in df.columns:
+            df["ativo"] = True
+        return df
+    except FileNotFoundError:
+        return pd.DataFrame()
+
+
+# --------------------------- LEITURAS ------------------------
 def supabase_obter_leituras():
-    resposta = requests.get(supabase_endpoint(), headers=supabase_headers(), params={"select": "*", "order": "id.asc", "limit": 10000}, timeout=20)
+    resposta = requests.get(supabase_endpoint(SUPABASE_TABELA_LEITURAS), headers=supabase_headers(), params={"select": "*", "order": "id.asc", "limit": 10000}, timeout=20)
     resposta.raise_for_status()
     df = pd.DataFrame(resposta.json())
     if df.empty:
@@ -59,14 +127,14 @@ def supabase_inserir(registros):
     dados = registros.copy()
     dados["data_amostragem"] = pd.to_datetime(dados["data_amostragem"]).dt.strftime("%Y-%m-%d")
     dados = dados[["id_transformador", "data_amostragem", "condicao_operacao", "gas", "valor_ppm"]].to_dict(orient="records")
-    resposta = requests.post(supabase_endpoint(), headers={**supabase_headers(), "Prefer": "return=representation"}, json=dados, timeout=30)
+    resposta = requests.post(supabase_endpoint(SUPABASE_TABELA_LEITURAS), headers={**supabase_headers(), "Prefer": "return=representation"}, json=dados, timeout=30)
     resposta.raise_for_status()
     return resposta.json()
 
 
 def supabase_excluir(ids):
     for registro_id in ids:
-        resposta = requests.delete(supabase_endpoint(), headers=supabase_headers(), params={"id": f"eq.{int(registro_id)}"}, timeout=20)
+        resposta = requests.delete(supabase_endpoint(SUPABASE_TABELA_LEITURAS), headers=supabase_headers(), params={"id": f"eq.{int(registro_id)}"}, timeout=20)
         resposta.raise_for_status()
 
 
@@ -89,10 +157,6 @@ def importar_historico_csv():
 # ============================================================
 # CARREGA AS BASES
 # ============================================================
-def carregar_equipamentos():
-    return pd.read_csv(ARQ_EQUIP)
-
-
 def carregar_leituras():
     if supabase_configurado():
         try:
@@ -148,30 +212,57 @@ if pagina == "➕ Cadastrar Dados":
             enviar_equip = st.form_submit_button("Cadastrar Equipamento")
             if enviar_equip:
                 novo_id = novo_id.strip().upper()
+                ids_existentes = equipamentos["id_transformador"].astype(str).str.upper().values if not equipamentos.empty and "id_transformador" in equipamentos.columns else []
                 if not novo_id:
                     st.error("Informe o ID do Transformador.")
-                elif novo_id in equipamentos["id_transformador"].values:
+                elif novo_id in ids_existentes:
                     st.error(f"O ID '{novo_id}' já existe. Escolha outro identificador.")
                 else:
-                    nova_linha = pd.DataFrame([{"id_transformador": novo_id, "Fabricante": fabricante, "Ano de Fabricação": ano_fab, "Potência KVA": potencia, "Tensão KV": tensao, "Volume de Óleo": volume_oleo}])
-                    equipamentos = pd.concat([equipamentos, nova_linha], ignore_index=True)
-                    equipamentos.to_csv(ARQ_EQUIP, index=False)
-                    st.success(f"Equipamento {novo_id} cadastrado com sucesso!")
-                    st.rerun()
+                    registro = {
+                        "id_transformador": novo_id,
+                        "fabricante": fabricante.strip(),
+                        "ano_fabricacao": ano_fab,
+                        "potencia_kva": potencia,
+                        "tensao_kv": tensao,
+                        "volume_oleo": volume_oleo,
+                        "ativo": True,
+                    }
+                    try:
+                        if supabase_configurado():
+                            supabase_inserir_equipamento(registro)
+                        else:
+                            nova_linha = pd.DataFrame([{"id_transformador": novo_id, "Fabricante": fabricante, "Ano de Fabricação": ano_fab, "Potência KVA": potencia, "Tensão KV": tensao, "Volume de Óleo": volume_oleo, "ativo": True}])
+                            equipamentos = pd.concat([equipamentos, nova_linha], ignore_index=True)
+                            equipamentos.to_csv(ARQ_EQUIP, index=False)
+                        st.success(f"Equipamento {novo_id} cadastrado com sucesso!")
+                        st.rerun()
+                    except requests.RequestException as erro:
+                        st.error(f"Erro ao salvar o equipamento no Supabase: {erro}")
         st.markdown("---")
         st.caption("Equipamentos cadastrados atualmente:")
-        st.dataframe(equipamentos, use_container_width=True)
-        st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
+        if equipamentos.empty:
+            st.info("Nenhum equipamento cadastrado.")
+        else:
+            colunas_tabela = [c for c in ["id_transformador", "fabricante", "Fabricante", "ano_fabricacao", "Ano de Fabricação", "potencia_kva", "Potência KVA", "tensao_kv", "Tensão KV", "volume_oleo", "Volume de Óleo", "ativo"] if c in equipamentos.columns]
+            st.dataframe(equipamentos[colunas_tabela], use_container_width=True, hide_index=True)
+            if supabase_configurado():
+                st.caption("Equipamentos inativos permanecem cadastrados, mas não aparecem para novos lançamentos nem no filtro principal do dashboard.")
+                opcoes = equipamentos[["id", "id_transformador", "ativo"]].copy() if "id" in equipamentos.columns else pd.DataFrame()
+                if not opcoes.empty:
+                    st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
+            else:
+                st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
 
     with aba_leitura:
         st.subheader("Registrar novo resultado de gás (DGA)")
-        if equipamentos.empty:
-            st.warning("Cadastre um equipamento antes de lançar leituras.")
+        equipamentos_ativos = equipamentos[equipamentos.get("ativo", True) == True].copy() if not equipamentos.empty else equipamentos
+        if equipamentos_ativos.empty:
+            st.warning("Cadastre um equipamento ativo antes de lançar leituras.")
         else:
             with st.form("form_leitura", clear_on_submit=True):
                 col1, col2 = st.columns(2)
                 with col1:
-                    transformador = st.selectbox("Transformador", sorted(equipamentos["id_transformador"].unique()))
+                    transformador = st.selectbox("Transformador", sorted(equipamentos_ativos["id_transformador"].astype(str).unique()))
                     data_amostra = st.date_input("Data de Amostragem", value=date.today())
                     condicao = st.selectbox("Condição de Operação", ["Normal", "Sobrecarga", "Manutenção", "Outra"])
                 with col2:
@@ -256,7 +347,12 @@ else:
         st.warning("Não há dados DGA disponíveis. Se o Supabase foi configurado agora, vá em **Cadastrar Dados → Gerenciar / Excluir** e importe o histórico do CSV.")
         st.stop()
     st.sidebar.header("Filtros")
-    transformadores = sorted(df["id_transformador"].unique())
+    equipamentos = carregar_equipamentos()
+    ativos = set(equipamentos.loc[equipamentos.get("ativo", True) == True, "id_transformador"].astype(str)) if not equipamentos.empty else set()
+    transformadores = sorted([str(x) for x in df["id_transformador"].unique() if str(x) in ativos]) if ativos else sorted(df["id_transformador"].unique())
+    if not transformadores:
+        st.warning("Não há equipamentos ativos com dados DGA disponíveis.")
+        st.stop()
     transformador_sel = st.sidebar.selectbox("Transformador", transformadores)
     df_tr = df[df["id_transformador"] == transformador_sel]
     gases_disponiveis = sorted(df_tr["gas"].unique())

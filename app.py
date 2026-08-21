@@ -62,7 +62,7 @@ if pagina == "➕ Cadastrar Dados":
 
     equipamentos = carregar_equipamentos()
 
-    aba_equip, aba_leitura = st.tabs(["Novo Equipamento", "Nova Leitura de Gás"])
+    aba_equip, aba_leitura = st.tabs(["Novo Equipamento", "Nova Análise DGA"])
 
     # -------- NOVO EQUIPAMENTO --------
     with aba_equip:
@@ -110,41 +110,191 @@ if pagina == "➕ Cadastrar Dados":
             mime="text/csv",
         )
 
-    # -------- NOVA LEITURA --------
-    with aba_leitura:
-        st.subheader("Registrar novo resultado de gás (DGA)")
+    # -------- NOVA ANÁLISE DGA --------
+with aba_leitura:
+    st.subheader("Registrar nova análise de gás dissolvido (DGA)")
+    st.caption(
+        "Informe os resultados da análise para o transformador e a data. "
+        "Deixe em branco os gases que não foram analisados."
+    )
 
-        if equipamentos.empty:
-            st.warning("Cadastre um equipamento antes de lançar leituras.")
-        else:
-            with st.form("form_leitura", clear_on_submit=True):
-                col1, col2 = st.columns(2)
-                with col1:
-                    transformador = st.selectbox(
-                        "Transformador", sorted(equipamentos["id_transformador"].unique())
+    if equipamentos.empty:
+        st.warning("Cadastre um equipamento antes de lançar análises DGA.")
+    else:
+        with st.form("form_analise_dga", clear_on_submit=True):
+
+            # -------- DADOS DA ANÁLISE --------
+            col1, col2 = st.columns(2)
+
+            with col1:
+                transformador = st.selectbox(
+                    "Transformador",
+                    sorted(equipamentos["id_transformador"].unique())
+                )
+
+                data_amostra = st.date_input(
+                    "Data de Amostragem",
+                    value=date.today()
+                )
+
+            with col2:
+                condicao = st.selectbox(
+                    "Condição de Operação",
+                    ["Normal", "Sobrecarga", "Manutenção", "Outra"]
+                )
+
+            st.markdown("### Resultados da análise DGA")
+            st.caption("Valores em ppm. Use vírgula ou ponto para casas decimais.")
+
+            # -------- GASES --------
+            col1, col2 = st.columns(2)
+
+            with col1:
+                valor_h2 = st.text_input(
+                    "Hidrogênio (H₂)",
+                    placeholder="Ex.: 15,2"
+                )
+
+                valor_ch4 = st.text_input(
+                    "Metano (CH₄)",
+                    placeholder="Ex.: 2,5"
+                )
+
+                valor_c2h2 = st.text_input(
+                    "Acetileno (C₂H₂)",
+                    placeholder="Ex.: 0"
+                )
+
+                valor_c2h4 = st.text_input(
+                    "Etileno (C₂H₄)",
+                    placeholder="Ex.: 8,3"
+                )
+
+            with col2:
+                valor_c2h6 = st.text_input(
+                    "Etano (C₂H₆)",
+                    placeholder="Ex.: 3,1"
+                )
+
+                valor_co = st.text_input(
+                    "Monóxido de Carbono (CO)",
+                    placeholder="Ex.: 120"
+                )
+
+                valor_co2 = st.text_input(
+                    "Dióxido de Carbono (CO₂)",
+                    placeholder="Ex.: 800"
+                )
+
+            enviar_analise = st.form_submit_button(
+                "Registrar Análise DGA"
+            )
+
+            if enviar_analise:
+
+                valores_gases = {
+                    "Hidrogênio": valor_h2,
+                    "Metano": valor_ch4,
+                    "Acetileno": valor_c2h2,
+                    "Etileno": valor_c2h4,
+                    "Etano": valor_c2h6,
+                    "Monóxido de Carbono": valor_co,
+                    "Dióxido de Carbono": valor_co2,
+                }
+
+                erros = []
+                resultados = []
+
+                for gas, valor in valores_gases.items():
+
+                    # Campo vazio = gás não informado
+                    if not valor.strip():
+                        continue
+
+                    try:
+                        valor_convertido = float(
+                            valor.strip().replace(",", ".")
+                        )
+
+                        if valor_convertido < 0:
+                            erros.append(
+                                f"{gas}: o valor não pode ser negativo."
+                            )
+                        else:
+                            resultados.append(
+                                {
+                                    "id_transformador": transformador,
+                                    "data_amostragem": pd.Timestamp(data_amostra),
+                                    "condicao_operacao": condicao,
+                                    "gas": gas,
+                                    "valor_ppm": valor_convertido,
+                                }
+                            )
+
+                    except ValueError:
+                        erros.append(
+                            f"{gas}: informe um número válido."
+                        )
+
+                # É necessário informar pelo menos um gás
+                if not resultados and not erros:
+                    erros.append(
+                        "Informe pelo menos um resultado de gás."
                     )
-                    data_amostra = st.date_input("Data de Amostragem", value=date.today())
-                    condicao = st.selectbox("Condição de Operação", ["Normal", "Sobrecarga", "Manutenção", "Outra"])
-                with col2:
-                    gas = st.selectbox("Gás", GASES_PADRAO)
-                    valor_ppm = st.number_input("Valor (ppm)", min_value=0.0, step=0.1)
 
-                enviar_leitura = st.form_submit_button("Registrar Leitura")
+                # -------- VERIFICAÇÃO DE DUPLICIDADE --------
+                if not erros and resultados:
 
-                if enviar_leitura:
                     leituras = carregar_leituras()
-                    nova_leitura = pd.DataFrame([{
-                        "id_transformador": transformador,
-                        "data_amostragem": pd.Timestamp(data_amostra),
-                        "condicao_operacao": condicao,
-                        "gas": gas,
-                        "valor_ppm": valor_ppm,
-                    }])
-                    leituras = pd.concat([leituras, nova_leitura], ignore_index=True)
-                    leituras.to_csv(ARQ_LEIT, index=False)
-                    st.success(
-                        f"Leitura registrada: {transformador} — {gas} = {valor_ppm} ppm em {data_amostra}"
+
+                    for resultado in resultados:
+
+                        duplicado = leituras[
+                            (leituras["id_transformador"] == resultado["id_transformador"])
+                            & (
+                                pd.to_datetime(
+                                    leituras["data_amostragem"]
+                                ).dt.date
+                                == data_amostra
+                            )
+                            & (leituras["gas"] == resultado["gas"])
+                        ]
+
+                        if not duplicado.empty:
+                            erros.append(
+                                f"Já existe um resultado para "
+                                f"{resultado['gas']} no transformador "
+                                f"{transformador} em {data_amostra}."
+                            )
+
+                # -------- GRAVAÇÃO --------
+                if erros:
+
+                    for erro in erros:
+                        st.error(erro)
+
+                else:
+
+                    nova_analise = pd.DataFrame(resultados)
+
+                    leituras = carregar_leituras()
+
+                    leituras = pd.concat(
+                        [leituras, nova_analise],
+                        ignore_index=True
                     )
+
+                    leituras.to_csv(
+                        ARQ_LEIT,
+                        index=False
+                    )
+
+                    st.success(
+                        f"Análise DGA registrada com sucesso para "
+                        f"{transformador} em {data_amostra}. "
+                        f"{len(resultados)} resultado(s) incluído(s)."
+                    )
+
                     st.cache_data.clear()
                     st.rerun()
 

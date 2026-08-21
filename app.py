@@ -4,26 +4,87 @@ import plotly.graph_objects as go
 import plotly.express as px
 from datetime import date
 import os
+import requests
 
 from calculo_cep import calcular_base_completa, LIMIARES_IEC
 
 # ============================================================
 # CONFIGURAÇÃO DA PÁGINA
 # ============================================================
-st.set_page_config(
-    page_title="Monitoramento de Transformadores",
-    page_icon="⚡",
-    layout="wide"
-)
+st.set_page_config(page_title="Monitoramento de Transformadores", page_icon="⚡", layout="wide")
 
 DATA_DIR = "data"
 ARQ_EQUIP = os.path.join(DATA_DIR, "equipamentos.csv")
 ARQ_LEIT = os.path.join(DATA_DIR, "leituras.csv")
+GASES_PADRAO = ["Hidrogênio", "Metano", "Acetileno", "Etileno", "Etano", "Monóxido de Carbono", "Dióxido de Carbono"]
 
-GASES_PADRAO = [
-    "Hidrogênio", "Metano", "Acetileno", "Etileno",
-    "Etano", "Monóxido de Carbono", "Dióxido de Carbono",
-]
+# ============================================================
+# SUPABASE — PERSISTÊNCIA DOS DADOS DGA
+# ============================================================
+def obter_config_supabase():
+    try:
+        return st.secrets.get("SUPABASE_URL", "").strip(), st.secrets.get("SUPABASE_ANON_KEY", "").strip()
+    except Exception:
+        return "", ""
+
+
+SUPABASE_URL, SUPABASE_ANON_KEY = obter_config_supabase()
+SUPABASE_TABELA = "leituras_dga"
+
+
+def supabase_configurado():
+    return bool(SUPABASE_URL and SUPABASE_ANON_KEY)
+
+
+def supabase_headers():
+    return {"apikey": SUPABASE_ANON_KEY, "Authorization": f"Bearer {SUPABASE_ANON_KEY}", "Content-Type": "application/json"}
+
+
+def supabase_endpoint():
+    return f"{SUPABASE_URL.rstrip('/')}/rest/v1/{SUPABASE_TABELA}"
+
+
+def supabase_obter_leituras():
+    resposta = requests.get(supabase_endpoint(), headers=supabase_headers(), params={"select": "*", "order": "id.asc", "limit": 10000}, timeout=20)
+    resposta.raise_for_status()
+    df = pd.DataFrame(resposta.json())
+    if df.empty:
+        return pd.DataFrame(columns=["id", "created_at", "id_transformador", "data_amostragem", "condicao_operacao", "gas", "valor_ppm"])
+    df["data_amostragem"] = pd.to_datetime(df["data_amostragem"])
+    df["valor_ppm"] = pd.to_numeric(df["valor_ppm"], errors="coerce")
+    return df
+
+
+def supabase_inserir(registros):
+    dados = registros.copy()
+    dados["data_amostragem"] = pd.to_datetime(dados["data_amostragem"]).dt.strftime("%Y-%m-%d")
+    dados = dados[["id_transformador", "data_amostragem", "condicao_operacao", "gas", "valor_ppm"]].to_dict(orient="records")
+    resposta = requests.post(supabase_endpoint(), headers={**supabase_headers(), "Prefer": "return=representation"}, json=dados, timeout=30)
+    resposta.raise_for_status()
+    return resposta.json()
+
+
+def supabase_excluir(ids):
+    for registro_id in ids:
+        resposta = requests.delete(supabase_endpoint(), headers=supabase_headers(), params={"id": f"eq.{int(registro_id)}"}, timeout=20)
+        resposta.raise_for_status()
+
+
+def chave_registro(linha):
+    return (str(linha["id_transformador"]), pd.to_datetime(linha["data_amostragem"]).date().isoformat(), str(linha["gas"]))
+
+
+def importar_historico_csv():
+    historico = pd.read_csv(ARQ_LEIT, parse_dates=["data_amostragem"])
+    atual = supabase_obter_leituras()
+    existentes = set(atual.apply(chave_registro, axis=1)) if not atual.empty else set()
+    historico["_chave"] = historico.apply(chave_registro, axis=1)
+    faltantes = historico[~historico["_chave"].isin(existentes)].drop(columns="_chave")
+    if faltantes.empty:
+        return 0
+    supabase_inserir(faltantes)
+    return len(faltantes)
+
 
 # ============================================================
 # CARREGA AS BASES
@@ -33,38 +94,45 @@ def carregar_equipamentos():
 
 
 def carregar_leituras():
+    if supabase_configurado():
+        try:
+            return supabase_obter_leituras()
+        except requests.RequestException as erro:
+            st.error(f"Não foi possível acessar o Supabase: {erro}")
+            return pd.DataFrame()
     return pd.read_csv(ARQ_LEIT, parse_dates=["data_amostragem"])
 
 
 @st.cache_data
-def calcular(leituras_csv_mtime, leituras: pd.DataFrame):
-    # o argumento leituras_csv_mtime só existe para invalidar o cache
-    # quando o arquivo de leituras muda
+def calcular(assinatura_dados, leituras: pd.DataFrame):
     return calcular_base_completa(leituras)
 
 
 def get_base_calculada():
     leituras = carregar_leituras()
-    mtime = os.path.getmtime(ARQ_LEIT)
-    return calcular(mtime, leituras)
+    if leituras.empty:
+        return pd.DataFrame()
+    assinatura = hash(pd.util.hash_pandas_object(leituras, index=True).values.tobytes())
+    return calcular(assinatura, leituras)
 
 
 # ============================================================
 # NAVEGAÇÃO
 # ============================================================
 pagina = st.sidebar.radio("Navegação", ["📊 Dashboard", "➕ Cadastrar Dados"])
+if supabase_configurado():
+    st.sidebar.success("☁️ Dados persistidos no Supabase")
+else:
+    st.sidebar.warning("⚠️ Supabase ainda não configurado. O app está usando o CSV local.")
 
 # ============================================================
 # PÁGINA: CADASTRAR DADOS
 # ============================================================
 if pagina == "➕ Cadastrar Dados":
     st.title("➕ Cadastrar Novos Dados")
-
     equipamentos = carregar_equipamentos()
+    aba_equip, aba_leitura, aba_exclusao = st.tabs(["Novo Equipamento", "Nova Leitura de Gás", "🗑️ Gerenciar / Excluir"])
 
-    aba_equip, aba_leitura = st.tabs(["Novo Equipamento", "Nova Análise DGA"])
-
-    # -------- NOVO EQUIPAMENTO --------
     with aba_equip:
         st.subheader("Cadastrar novo transformador")
         with st.form("form_equipamento", clear_on_submit=True):
@@ -77,9 +145,7 @@ if pagina == "➕ Cadastrar Dados":
                 potencia = st.number_input("Potência (KVA)", min_value=0.0, step=1.0)
                 tensao = st.number_input("Tensão (KV)", min_value=0.0, step=1.0)
                 volume_oleo = st.number_input("Volume de Óleo (L)", min_value=0.0, step=1.0)
-
             enviar_equip = st.form_submit_button("Cadastrar Equipamento")
-
             if enviar_equip:
                 novo_id = novo_id.strip().upper()
                 if not novo_id:
@@ -87,350 +153,154 @@ if pagina == "➕ Cadastrar Dados":
                 elif novo_id in equipamentos["id_transformador"].values:
                     st.error(f"O ID '{novo_id}' já existe. Escolha outro identificador.")
                 else:
-                    nova_linha = pd.DataFrame([{
-                        "id_transformador": novo_id,
-                        "Fabricante": fabricante,
-                        "Ano de Fabricação": ano_fab,
-                        "Potência KVA": potencia,
-                        "Tensão KV": tensao,
-                        "Volume de Óleo": volume_oleo,
-                    }])
+                    nova_linha = pd.DataFrame([{"id_transformador": novo_id, "Fabricante": fabricante, "Ano de Fabricação": ano_fab, "Potência KVA": potencia, "Tensão KV": tensao, "Volume de Óleo": volume_oleo}])
                     equipamentos = pd.concat([equipamentos, nova_linha], ignore_index=True)
                     equipamentos.to_csv(ARQ_EQUIP, index=False)
                     st.success(f"Equipamento {novo_id} cadastrado com sucesso!")
                     st.rerun()
-
         st.markdown("---")
         st.caption("Equipamentos cadastrados atualmente:")
         st.dataframe(equipamentos, use_container_width=True)
-        st.download_button(
-            "⬇️ Baixar equipamentos.csv atualizado",
-            data=equipamentos.to_csv(index=False).encode("utf-8"),
-            file_name="equipamentos.csv",
-            mime="text/csv",
-        )
+        st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
 
- # -------- NOVA ANÁLISE DGA --------
     with aba_leitura:
-        st.subheader("Registrar nova análise de gás dissolvido (DGA)")
-        st.caption(
-            "Informe os resultados da análise para o transformador e a data. "
-            "Deixe em branco os gases que não foram analisados."
-        )
-    
+        st.subheader("Registrar novo resultado de gás (DGA)")
         if equipamentos.empty:
-            st.warning("Cadastre um equipamento antes de lançar análises DGA.")
+            st.warning("Cadastre um equipamento antes de lançar leituras.")
         else:
-            with st.form("form_analise_dga", clear_on_submit=True):
-    
-                # -------- DADOS DA ANÁLISE --------
+            with st.form("form_leitura", clear_on_submit=True):
                 col1, col2 = st.columns(2)
-    
                 with col1:
-                    transformador = st.selectbox(
-                        "Transformador",
-                        sorted(equipamentos["id_transformador"].unique())
-                    )
-    
-                    data_amostra = st.date_input(
-                        "Data de Amostragem",
-                        value=date.today()
-                    )
-    
+                    transformador = st.selectbox("Transformador", sorted(equipamentos["id_transformador"].unique()))
+                    data_amostra = st.date_input("Data de Amostragem", value=date.today())
+                    condicao = st.selectbox("Condição de Operação", ["Normal", "Sobrecarga", "Manutenção", "Outra"])
                 with col2:
-                    condicao = st.selectbox(
-                        "Condição de Operação",
-                        ["Normal", "Sobrecarga", "Manutenção", "Outra"]
-                    )
-    
-                st.markdown("### Resultados da análise DGA")
-                st.caption("Valores em ppm. Use vírgula ou ponto para casas decimais.")
-    
-                # -------- GASES --------
-                col1, col2 = st.columns(2)
-    
-                with col1:
-                    valor_h2 = st.text_input(
-                        "Hidrogênio (H₂)",
-                        placeholder="Ex.: 15,2"
-                    )
-    
-                    valor_ch4 = st.text_input(
-                        "Metano (CH₄)",
-                        placeholder="Ex.: 2,5"
-                    )
-    
-                    valor_c2h2 = st.text_input(
-                        "Acetileno (C₂H₂)",
-                        placeholder="Ex.: 0"
-                    )
-    
-                    valor_c2h4 = st.text_input(
-                        "Etileno (C₂H₄)",
-                        placeholder="Ex.: 8,3"
-                    )
-    
-                with col2:
-                    valor_c2h6 = st.text_input(
-                        "Etano (C₂H₆)",
-                        placeholder="Ex.: 3,1"
-                    )
-    
-                    valor_co = st.text_input(
-                        "Monóxido de Carbono (CO)",
-                        placeholder="Ex.: 120"
-                    )
-    
-                    valor_co2 = st.text_input(
-                        "Dióxido de Carbono (CO₂)",
-                        placeholder="Ex.: 800"
-                    )
-    
-                enviar_analise = st.form_submit_button(
-                    "Registrar Análise DGA"
-                )
-    
-                if enviar_analise:
-    
-                    valores_gases = {
-                        "Hidrogênio": valor_h2,
-                        "Metano": valor_ch4,
-                        "Acetileno": valor_c2h2,
-                        "Etileno": valor_c2h4,
-                        "Etano": valor_c2h6,
-                        "Monóxido de Carbono": valor_co,
-                        "Dióxido de Carbono": valor_co2,
-                    }
-    
-                    erros = []
-                    resultados = []
-    
-                    for gas, valor in valores_gases.items():
-    
-                        # Campo vazio = gás não informado
-                        if not valor.strip():
-                            continue
-    
-                        try:
-                            valor_convertido = float(
-                                valor.strip().replace(",", ".")
-                            )
-    
-                            if valor_convertido < 0:
-                                erros.append(
-                                    f"{gas}: o valor não pode ser negativo."
-                                )
-                            else:
-                                resultados.append(
-                                    {
-                                        "id_transformador": transformador,
-                                        "data_amostragem": pd.Timestamp(data_amostra),
-                                        "condicao_operacao": condicao,
-                                        "gas": gas,
-                                        "valor_ppm": valor_convertido,
-                                    }
-                                )
-    
-                        except ValueError:
-                            erros.append(
-                                f"{gas}: informe um número válido."
-                            )
-    
-                    # É necessário informar pelo menos um gás
-                    if not resultados and not erros:
-                        erros.append(
-                            "Informe pelo menos um resultado de gás."
-                        )
-    
-                    # -------- VERIFICAÇÃO DE DUPLICIDADE --------
-                    if not erros and resultados:
-    
-                        leituras = carregar_leituras()
-    
-                        for resultado in resultados:
-    
-                            duplicado = leituras[
-                                (leituras["id_transformador"] == resultado["id_transformador"])
-                                & (
-                                    pd.to_datetime(
-                                        leituras["data_amostragem"]
-                                    ).dt.date
-                                    == data_amostra
-                                )
-                                & (leituras["gas"] == resultado["gas"])
-                            ]
-    
-                            if not duplicado.empty:
-                                erros.append(
-                                    f"Já existe um resultado para "
-                                    f"{resultado['gas']} no transformador "
-                                    f"{transformador} em {data_amostra}."
-                                )
-    
-                    # -------- GRAVAÇÃO --------
-                    if erros:
-    
-                        for erro in erros:
-                            st.error(erro)
-    
+                    gas = st.selectbox("Gás", GASES_PADRAO)
+                    valor_ppm = st.number_input("Valor (ppm)", min_value=0.0, step=0.1)
+                enviar_leitura = st.form_submit_button("Registrar Leitura")
+                if enviar_leitura:
+                    nova_leitura = pd.DataFrame([{"id_transformador": transformador, "data_amostragem": pd.Timestamp(data_amostra), "condicao_operacao": condicao, "gas": gas, "valor_ppm": valor_ppm}])
+                    existentes = carregar_leituras()
+                    duplicado = existentes[(existentes["id_transformador"] == transformador) & (pd.to_datetime(existentes["data_amostragem"]).dt.date == data_amostra) & (existentes["gas"] == gas)]
+                    if not duplicado.empty:
+                        st.error(f"Já existe um resultado para {gas} no transformador {transformador} em {data_amostra}.")
                     else:
-    
-                        nova_analise = pd.DataFrame(resultados)
-    
-                        leituras = carregar_leituras()
-    
-                        leituras = pd.concat(
-                            [leituras, nova_analise],
-                            ignore_index=True
-                        )
-    
-                        leituras.to_csv(
-                            ARQ_LEIT,
-                            index=False
-                        )
-    
-                        st.success(
-                            f"Análise DGA registrada com sucesso para "
-                            f"{transformador} em {data_amostra}. "
-                            f"{len(resultados)} resultado(s) incluído(s)."
-                        )
-    
+                        try:
+                            if supabase_configurado():
+                                supabase_inserir(nova_leitura)
+                            else:
+                                pd.concat([existentes, nova_leitura], ignore_index=True).to_csv(ARQ_LEIT, index=False)
+                            st.success(f"Leitura registrada: {transformador} — {gas} = {valor_ppm} ppm em {data_amostra}")
+                            st.cache_data.clear()
+                            st.rerun()
+                        except requests.RequestException as erro:
+                            st.error(f"Erro ao salvar no Supabase: {erro}")
+        st.markdown("---")
+        leituras_atual = carregar_leituras()
+        st.download_button("⬇️ Baixar backup da base DGA", data=leituras_atual.to_csv(index=False).encode("utf-8"), file_name="leituras.csv", mime="text/csv")
+        st.info("A base operacional está no Supabase. O CSV acima funciona como backup e não como fonte principal dos dados." if supabase_configurado() else "⚠️ O Supabase ainda não está configurado. Neste momento o app está gravando no CSV local.")
+        st.markdown("---")
+        st.caption("Limiares de referência (IEC/IEEE) usados no sinal de alerta por gás:")
+        st.dataframe(pd.DataFrame([{"Gás": g, "Limiar (ppm)": v} for g, v in LIMIARES_IEC.items()]), use_container_width=True)
+
+    with aba_exclusao:
+        st.subheader("Gerenciar registros DGA")
+        if not supabase_configurado():
+            st.warning("Configure o Supabase para habilitar a exclusão persistente de registros.")
+        else:
+            leituras = carregar_leituras()
+            if leituras.empty:
+                st.info("Não há registros DGA no Supabase.")
+            else:
+                transformadores = sorted(leituras["id_transformador"].unique())
+                tr_excluir = st.selectbox("Transformador", transformadores, key="tr_excluir")
+                datas = sorted(pd.to_datetime(leituras.loc[leituras["id_transformador"] == tr_excluir, "data_amostragem"]).dt.date.unique(), reverse=True)
+                data_excluir = st.selectbox("Data da análise", datas, key="data_excluir")
+                registros_data = leituras[(leituras["id_transformador"] == tr_excluir) & (pd.to_datetime(leituras["data_amostragem"]).dt.date == data_excluir)].copy()
+                st.write("**Resultados encontrados:**")
+                st.dataframe(registros_data[["id", "gas", "valor_ppm", "condicao_operacao"]].sort_values("gas"), use_container_width=True, hide_index=True)
+                st.warning("A exclusão abaixo remove permanentemente do Supabase todos os resultados dessa análise para o transformador e a data escolhidos.")
+                confirmar = st.checkbox("Confirmo que quero excluir esta análise completa.", key="confirmar_exclusao")
+                if st.button("🗑️ Excluir análise DGA", type="primary", disabled=not confirmar):
+                    try:
+                        ids = registros_data["id"].tolist()
+                        supabase_excluir(ids)
                         st.cache_data.clear()
+                        st.success(f"Análise de {tr_excluir} em {data_excluir} excluída com sucesso. {len(ids)} registro(s) removido(s).")
                         st.rerun()
-    
-            st.markdown("---")
-            leituras_atual = carregar_leituras()
-            st.download_button(
-                "⬇️ Baixar leituras.csv atualizado",
-                data=leituras_atual.to_csv(index=False).encode("utf-8"),
-                file_name="leituras.csv",
-                mime="text/csv",
-            )
-            st.caption(
-                "⚠️ Se o app estiver rodando no Streamlit Cloud, baixe esses arquivos de "
-                "tempos em tempos e suba-os de volta no GitHub — assim os dados novos "
-                "não se perdem se o app reiniciar."
-            )
-    
-            st.markdown("---")
-            st.caption("Limiares de referência (IEC/IEEE) usados no sinal de alerta por gás:")
-            st.dataframe(
-                pd.DataFrame(
-                    [{"Gás": g, "Limiar (ppm)": v} for g, v in LIMIARES_IEC.items()]
-                ),
-                use_container_width=True,
-            )
+                    except requests.RequestException as erro:
+                        st.error(f"Erro ao excluir no Supabase: {erro}")
+                st.markdown("---")
+                st.caption("Registros atuais no banco:")
+                st.dataframe(leituras.sort_values(["id_transformador", "data_amostragem", "gas"]), use_container_width=True, hide_index=True)
+                st.markdown("---")
+                st.subheader("Importar histórico do CSV")
+                st.caption("Use esta função quando quiser trazer para o Supabase os registros que ainda estiverem no CSV e não existirem no banco. Registros apagados não voltam automaticamente.")
+                if st.button("☁️ Importar registros ausentes do leituras.csv"):
+                    try:
+                        quantidade = importar_historico_csv()
+                        st.cache_data.clear()
+                        st.success(f"{quantidade} registro(s) histórico(s) importado(s)." if quantidade else "Nenhum registro novo para importar.")
+                        st.rerun()
+                    except requests.RequestException as erro:
+                        st.error(f"Erro ao importar para o Supabase: {erro}")
 
 # ============================================================
 # PÁGINA: DASHBOARD
 # ============================================================
 else:
     df = get_base_calculada()
-
     st.title("⚡ Monitoramento de Gases em Transformadores")
     st.markdown("---")
-
-    # -------- SIDEBAR — FILTROS --------
+    if df.empty:
+        st.warning("Não há dados DGA disponíveis. Se o Supabase foi configurado agora, vá em **Cadastrar Dados → Gerenciar / Excluir** e importe o histórico do CSV.")
+        st.stop()
     st.sidebar.header("Filtros")
-
     transformadores = sorted(df["id_transformador"].unique())
     transformador_sel = st.sidebar.selectbox("Transformador", transformadores)
-
     df_tr = df[df["id_transformador"] == transformador_sel]
-
     gases_disponiveis = sorted(df_tr["gas"].unique())
     gas_sel = st.sidebar.selectbox("Gás", ["(Todos)"] + gases_disponiveis)
-
-    if gas_sel != "(Todos)":
-        df_filtrado = df_tr[df_tr["gas"] == gas_sel]
-    else:
-        df_filtrado = df_tr
-
-    # -------- MÉTRICAS RESUMO --------
+    df_filtrado = df_tr[df_tr["gas"] == gas_sel] if gas_sel != "(Todos)" else df_tr
     st.subheader(f"Transformador: {transformador_sel}")
-
     col1, col2, col3 = st.columns(3)
-
     total = len(df_filtrado)
     criticos = (df_filtrado["classificacao_final"] == "Crítico").sum()
     atencao = (df_filtrado["classificacao_final"] == "Atenção").sum()
-
     col1.metric("Total de Registros", total)
     col2.metric("⚠️ Atenção", int(atencao))
     col3.metric("🔴 Crítico", int(criticos))
-
     st.markdown("---")
-
-    # -------- GRÁFICO — EVOLUÇÃO DO GÁS AO LONGO DO TEMPO --------
     st.subheader("Evolução dos Gases ao Longo do Tempo")
 
     def plot_gas(df_gas, gas_nome, height):
         df_gas = df_gas.sort_values("data_amostragem")
         fig = go.Figure()
-        fig.add_trace(go.Scatter(
-            x=df_gas["data_amostragem"], y=df_gas["x"],
-            mode="lines+markers", name=gas_nome, line=dict(color="royalblue")
-        ))
+        fig.add_trace(go.Scatter(x=df_gas["data_amostragem"], y=df_gas["x"], mode="lines+markers", name=gas_nome, line=dict(color="royalblue")))
         if "ucl_x" in df_gas.columns:
-            fig.add_trace(go.Scatter(
-                x=df_gas["data_amostragem"], y=df_gas["ucl_x"],
-                mode="lines", name="UCL", line=dict(color="red", dash="dash")
-            ))
-            fig.add_trace(go.Scatter(
-                x=df_gas["data_amostragem"], y=df_gas["lcl_x"],
-                mode="lines", name="LCL", line=dict(color="red", dash="dash")
-            ))
+            fig.add_trace(go.Scatter(x=df_gas["data_amostragem"], y=df_gas["ucl_x"], mode="lines", name="UCL", line=dict(color="red", dash="dash")))
+            fig.add_trace(go.Scatter(x=df_gas["data_amostragem"], y=df_gas["lcl_x"], mode="lines", name="LCL", line=dict(color="red", dash="dash")))
         if height > 350 and "ewma" in df_gas.columns:
-            fig.add_trace(go.Scatter(
-                x=df_gas["data_amostragem"], y=df_gas["ewma"],
-                mode="lines", name="EWMA", line=dict(color="orange", dash="dot")
-            ))
-        fig.update_layout(title=f"Gás: {gas_nome}", xaxis_title="Data",
-                           yaxis_title="Concentração (ppm)", height=height)
+            fig.add_trace(go.Scatter(x=df_gas["data_amostragem"], y=df_gas["ewma"], mode="lines", name="EWMA", line=dict(color="orange", dash="dot")))
+        fig.update_layout(title=f"Gás: {gas_nome}", xaxis_title="Data", yaxis_title="Concentração (ppm)", height=height)
         return fig
 
     if gas_sel == "(Todos)":
         for gas in gases_disponiveis:
             df_gas = df_tr[df_tr["gas"] == gas]
-            if df_gas.empty:
-                continue
-            st.plotly_chart(plot_gas(df_gas, gas, 350), use_container_width=True)
+            if not df_gas.empty:
+                st.plotly_chart(plot_gas(df_gas, gas, 350), use_container_width=True)
     else:
         st.plotly_chart(plot_gas(df_filtrado, gas_sel, 450), use_container_width=True)
 
     st.markdown("---")
-
-    # -------- CLASSIFICAÇÃO FINAL --------
     st.subheader("Classificação Final por Gás")
-
-    resumo = (
-        df_tr.groupby(["gas", "classificacao_final"])
-        .size()
-        .reset_index(name="count")
-    )
-
-    fig_class = px.bar(
-        resumo, x="gas", y="count", color="classificacao_final",
-        color_discrete_map={"Estável": "green", "Atenção": "orange", "Crítico": "red"},
-        barmode="group", title="Distribuição das Classificações por Gás",
-        labels={"gas": "Gás", "count": "Quantidade", "classificacao_final": "Classificação"}
-    )
+    resumo = df_tr.groupby(["gas", "classificacao_final"]).size().reset_index(name="count")
+    fig_class = px.bar(resumo, x="gas", y="count", color="classificacao_final", color_discrete_map={"Estável": "green", "Atenção": "orange", "Crítico": "red"}, barmode="group", title="Distribuição das Classificações por Gás", labels={"gas": "Gás", "count": "Quantidade", "classificacao_final": "Classificação"})
     fig_class.update_layout(height=400)
     st.plotly_chart(fig_class, use_container_width=True)
-
     st.markdown("---")
-
-    # -------- TABELA DE DADOS --------
     st.subheader("Dados Detalhados")
-
-    colunas_exibir = [
-        "id_transformador", "data_amostragem", "gas", "x",
-        "classificacao_final", "prioridade_acao",
-        "sinal_cep", "sinal_ewma", "sinal_cusum", "sinal_iec",
-        "total_sinais", "classificacao_tendencia"
-    ]
+    colunas_exibir = ["id_transformador", "data_amostragem", "gas", "x", "classificacao_final", "prioridade_acao", "sinal_cep", "sinal_ewma", "sinal_cusum", "sinal_iec", "total_sinais", "classificacao_tendencia"]
     colunas_validas = [c for c in colunas_exibir if c in df_filtrado.columns]
-    st.dataframe(
-        df_filtrado[colunas_validas].sort_values("data_amostragem"),
-        use_container_width=True
-    )
+    st.dataframe(df_filtrado[colunas_validas].sort_values("data_amostragem"), use_container_width=True)

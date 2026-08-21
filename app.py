@@ -110,7 +110,7 @@ if pagina == "➕ Cadastrar Dados":
             mime="text/csv",
         )
 
-    # -------- NOVA ANÁLISE DGA --------
+ # -------- NOVA ANÁLISE DGA --------
 with aba_leitura:
     st.subheader("Registrar nova análise de gás dissolvido (DGA)")
     st.caption(

@@ -89,9 +89,36 @@ def carregar_equipamentos():
 
 # --------------------------- LEITURAS ------------------------
 def supabase_obter_leituras():
-    resposta = requests.get(supabase_endpoint(SUPABASE_TABELA_LEITURAS), headers=supabase_headers(), params={"select": "*", "order": "id.asc", "limit": 10000}, timeout=20)
-    resposta.raise_for_status()
-    df = pd.DataFrame(resposta.json())
+    todos = []
+    limite = 1000
+    offset = 0
+
+    while True:
+        resposta = requests.get(
+            supabase_endpoint(SUPABASE_TABELA_LEITURAS),
+            headers=supabase_headers(),
+            params={
+                "select": "*",
+                "order": "id.asc",
+                "limit": limite,
+                "offset": offset,
+            },
+            timeout=20,
+        )
+        resposta.raise_for_status()
+        pagina = resposta.json()
+
+        if not pagina:
+            break
+
+        todos.extend(pagina)
+
+        if len(pagina) < limite:
+            break
+
+        offset += limite
+
+    df = pd.DataFrame(todos)
     if df.empty:
         return pd.DataFrame(columns=["id", "created_at", "id_transformador", "data_amostragem", "condicao_operacao", "gas", "valor_ppm"])
     df["data_amostragem"] = pd.to_datetime(df["data_amostragem"])

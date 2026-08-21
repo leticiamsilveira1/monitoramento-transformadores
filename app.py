@@ -47,12 +47,7 @@ def supabase_endpoint(tabela):
 
 # ------------------------- EQUIPAMENTOS ----------------------
 def supabase_obter_equipamentos():
-    resposta = requests.get(
-        supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS),
-        headers=supabase_headers(),
-        params={"select": "*", "order": "id.asc", "limit": 1000},
-        timeout=20,
-    )
+    resposta = requests.get(supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS), headers=supabase_headers(), params={"select": "*", "order": "id.asc", "limit": 1000}, timeout=20)
     resposta.raise_for_status()
     df = pd.DataFrame(resposta.json())
     if df.empty:
@@ -64,21 +59,14 @@ def supabase_obter_equipamentos():
 
 
 def supabase_inserir_equipamento(registro):
-    dados = {
-        "id_transformador": str(registro["id_transformador"]),
-        "fabricante": str(registro["fabricante"]),
-        "ano_fabricacao": int(registro["ano_fabricacao"]),
-        "potencia_kva": float(registro["potencia_kva"]),
-        "tensao_kv": float(registro["tensao_kv"]),
-        "volume_oleo": float(registro["volume_oleo"]),
-        "ativo": bool(registro.get("ativo", True)),
-    }
-    resposta = requests.post(
-        supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS),
-        headers={**supabase_headers(), "Prefer": "return=representation"},
-        json=dados,
-        timeout=30,
-    )
+    dados = {"id_transformador": str(registro["id_transformador"]), "fabricante": str(registro["fabricante"]), "ano_fabricacao": int(registro["ano_fabricacao"]), "potencia_kva": float(registro["potencia_kva"]), "tensao_kv": float(registro["tensao_kv"]), "volume_oleo": float(registro["volume_oleo"]), "ativo": bool(registro.get("ativo", True))}
+    resposta = requests.post(supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS), headers={**supabase_headers(), "Prefer": "return=representation"}, json=dados, timeout=30)
+    resposta.raise_for_status()
+    return resposta.json()
+
+
+def supabase_atualizar_equipamento(equipamento_id, ativo):
+    resposta = requests.patch(supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS), headers={**supabase_headers(), "Prefer": "return=representation"}, params={"id": f"eq.{int(equipamento_id)}"}, json={"ativo": bool(ativo)}, timeout=20)
     resposta.raise_for_status()
     return resposta.json()
 
@@ -226,6 +214,21 @@ if pagina == "➕ Cadastrar Dados":
             colunas_tabela = [c for c in ["id_transformador", "fabricante", "Fabricante", "ano_fabricacao", "Ano de Fabricação", "potencia_kva", "Potência KVA", "tensao_kv", "Tensão KV", "volume_oleo", "Volume de Óleo", "ativo"] if c in equipamentos.columns]
             st.dataframe(equipamentos[colunas_tabela], use_container_width=True, hide_index=True)
             st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
+
+            if supabase_configurado() and "id" in equipamentos.columns:
+                st.markdown("---")
+                st.subheader("Ativar / Inativar equipamento")
+                equipamento_sel = st.selectbox("Equipamento", equipamentos["id_transformador"].astype(str).tolist(), key="equipamento_status")
+                linha_sel = equipamentos[equipamentos["id_transformador"].astype(str) == equipamento_sel].iloc[0]
+                ativo_atual = bool(linha_sel.get("ativo", True))
+                novo_status = st.toggle("Equipamento ativo", value=ativo_atual, key=f"toggle_ativo_{equipamento_sel}")
+                if novo_status != ativo_atual:
+                    try:
+                        supabase_atualizar_equipamento(int(linha_sel["id"]), novo_status)
+                        st.success(f"{equipamento_sel} {'ativado' if novo_status else 'inativado'} com sucesso.")
+                        st.rerun()
+                    except requests.RequestException as erro:
+                        st.error(f"Erro ao atualizar o status do equipamento: {erro}")
 
     with aba_leitura:
         st.subheader("Registrar novo resultado de gás (DGA)")

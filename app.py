@@ -83,18 +83,6 @@ def supabase_inserir_equipamento(registro):
     return resposta.json()
 
 
-def supabase_atualizar_equipamento_ativo(equipamento_id, ativo):
-    resposta = requests.patch(
-        supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS),
-        headers={**supabase_headers(), "Prefer": "return=representation"},
-        params={"id": f"eq.{int(equipamento_id)}"},
-        json={"ativo": bool(ativo)},
-        timeout=20,
-    )
-    resposta.raise_for_status()
-    return resposta.json()
-
-
 def carregar_equipamentos():
     if supabase_configurado():
         try:
@@ -218,15 +206,7 @@ if pagina == "➕ Cadastrar Dados":
                 elif novo_id in ids_existentes:
                     st.error(f"O ID '{novo_id}' já existe. Escolha outro identificador.")
                 else:
-                    registro = {
-                        "id_transformador": novo_id,
-                        "fabricante": fabricante.strip(),
-                        "ano_fabricacao": ano_fab,
-                        "potencia_kva": potencia,
-                        "tensao_kv": tensao,
-                        "volume_oleo": volume_oleo,
-                        "ativo": True,
-                    }
+                    registro = {"id_transformador": novo_id, "fabricante": fabricante.strip(), "ano_fabricacao": ano_fab, "potencia_kva": potencia, "tensao_kv": tensao, "volume_oleo": volume_oleo, "ativo": True}
                     try:
                         if supabase_configurado():
                             supabase_inserir_equipamento(registro)
@@ -245,17 +225,11 @@ if pagina == "➕ Cadastrar Dados":
         else:
             colunas_tabela = [c for c in ["id_transformador", "fabricante", "Fabricante", "ano_fabricacao", "Ano de Fabricação", "potencia_kva", "Potência KVA", "tensao_kv", "Tensão KV", "volume_oleo", "Volume de Óleo", "ativo"] if c in equipamentos.columns]
             st.dataframe(equipamentos[colunas_tabela], use_container_width=True, hide_index=True)
-            if supabase_configurado():
-                st.caption("Equipamentos inativos permanecem cadastrados, mas não aparecem para novos lançamentos nem no filtro principal do dashboard.")
-                opcoes = equipamentos[["id", "id_transformador", "ativo"]].copy() if "id" in equipamentos.columns else pd.DataFrame()
-                if not opcoes.empty:
-                    st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
-            else:
-                st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
+            st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
 
     with aba_leitura:
         st.subheader("Registrar novo resultado de gás (DGA)")
-        equipamentos_ativos = equipamentos[equipamentos.get("ativo", True) == True].copy() if not equipamentos.empty else equipamentos
+        equipamentos_ativos = equipamentos[equipamentos["ativo"] == True].copy() if not equipamentos.empty and "ativo" in equipamentos.columns else equipamentos
         if equipamentos_ativos.empty:
             st.warning("Cadastre um equipamento ativo antes de lançar leituras.")
         else:
@@ -348,8 +322,11 @@ else:
         st.stop()
     st.sidebar.header("Filtros")
     equipamentos = carregar_equipamentos()
-    ativos = set(equipamentos.loc[equipamentos.get("ativo", True) == True, "id_transformador"].astype(str)) if not equipamentos.empty else set()
-    transformadores = sorted([str(x) for x in df["id_transformador"].unique() if str(x) in ativos]) if ativos else sorted(df["id_transformador"].unique())
+    if not equipamentos.empty and "ativo" in equipamentos.columns:
+        ativos = set(equipamentos.loc[equipamentos["ativo"] == True, "id_transformador"].astype(str))
+        transformadores = sorted([str(x) for x in df["id_transformador"].unique() if str(x) in ativos])
+    else:
+        transformadores = sorted(df["id_transformador"].unique())
     if not transformadores:
         st.warning("Não há equipamentos ativos com dados DGA disponíveis.")
         st.stop()

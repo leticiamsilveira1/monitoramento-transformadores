@@ -27,23 +27,18 @@ def obter_config_supabase():
     except Exception:
         return "", ""
 
-
 SUPABASE_URL, SUPABASE_ANON_KEY = obter_config_supabase()
 SUPABASE_TABELA_LEITURAS = "leituras_dga"
 SUPABASE_TABELA_EQUIPAMENTOS = "equipamentos"
 
-
 def supabase_configurado():
     return bool(SUPABASE_URL and SUPABASE_ANON_KEY)
-
 
 def supabase_headers():
     return {"apikey": SUPABASE_ANON_KEY, "Authorization": f"Bearer {SUPABASE_ANON_KEY}", "Content-Type": "application/json"}
 
-
 def supabase_endpoint(tabela):
     return f"{SUPABASE_URL.rstrip('/')}/rest/v1/{tabela}"
-
 
 # ------------------------- EQUIPAMENTOS ----------------------
 def supabase_obter_equipamentos():
@@ -57,19 +52,16 @@ def supabase_obter_equipamentos():
     df["ativo"] = df["ativo"].fillna(True).astype(bool)
     return df
 
-
 def supabase_inserir_equipamento(registro):
     dados = {"id_transformador": str(registro["id_transformador"]), "fabricante": str(registro["fabricante"]), "ano_fabricacao": int(registro["ano_fabricacao"]), "potencia_kva": float(registro["potencia_kva"]), "tensao_kv": float(registro["tensao_kv"]), "volume_oleo": float(registro["volume_oleo"]), "ativo": bool(registro.get("ativo", True))}
     resposta = requests.post(supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS), headers={**supabase_headers(), "Prefer": "return=representation"}, json=dados, timeout=30)
     resposta.raise_for_status()
     return resposta.json()
 
-
 def supabase_atualizar_equipamento(equipamento_id, ativo):
     resposta = requests.patch(supabase_endpoint(SUPABASE_TABELA_EQUIPAMENTOS), headers={**supabase_headers(), "Prefer": "return=representation"}, params={"id": f"eq.{int(equipamento_id)}"}, json={"ativo": bool(ativo)}, timeout=20)
     resposta.raise_for_status()
     return resposta.json()
-
 
 def carregar_equipamentos():
     if supabase_configurado():
@@ -86,45 +78,27 @@ def carregar_equipamentos():
     except FileNotFoundError:
         return pd.DataFrame()
 
-
 # --------------------------- LEITURAS ------------------------
 def supabase_obter_leituras():
     todos = []
     limite = 1000
     offset = 0
-
     while True:
-        resposta = requests.get(
-            supabase_endpoint(SUPABASE_TABELA_LEITURAS),
-            headers=supabase_headers(),
-            params={
-                "select": "*",
-                "order": "id.asc",
-                "limit": limite,
-                "offset": offset,
-            },
-            timeout=20,
-        )
+        resposta = requests.get(supabase_endpoint(SUPABASE_TABELA_LEITURAS), headers=supabase_headers(), params={"select": "*", "order": "id.asc", "limit": limite, "offset": offset}, timeout=20)
         resposta.raise_for_status()
         pagina = resposta.json()
-
         if not pagina:
             break
-
         todos.extend(pagina)
-
         if len(pagina) < limite:
             break
-
         offset += limite
-
     df = pd.DataFrame(todos)
     if df.empty:
         return pd.DataFrame(columns=["id", "created_at", "id_transformador", "data_amostragem", "condicao_operacao", "gas", "valor_ppm"])
     df["data_amostragem"] = pd.to_datetime(df["data_amostragem"])
     df["valor_ppm"] = pd.to_numeric(df["valor_ppm"], errors="coerce")
     return df
-
 
 def supabase_inserir(registros):
     dados = registros.copy()
@@ -134,16 +108,13 @@ def supabase_inserir(registros):
     resposta.raise_for_status()
     return resposta.json()
 
-
 def supabase_excluir(ids):
     for registro_id in ids:
         resposta = requests.delete(supabase_endpoint(SUPABASE_TABELA_LEITURAS), headers=supabase_headers(), params={"id": f"eq.{int(registro_id)}"}, timeout=20)
         resposta.raise_for_status()
 
-
 def chave_registro(linha):
     return (str(linha["id_transformador"]), pd.to_datetime(linha["data_amostragem"]).date().isoformat(), str(linha["gas"]))
-
 
 def importar_historico_csv():
     historico = pd.read_csv(ARQ_LEIT, parse_dates=["data_amostragem"])
@@ -155,7 +126,6 @@ def importar_historico_csv():
         return 0
     supabase_inserir(faltantes)
     return len(faltantes)
-
 
 # ============================================================
 # CARREGA AS BASES
@@ -169,11 +139,9 @@ def carregar_leituras():
             return pd.DataFrame()
     return pd.read_csv(ARQ_LEIT, parse_dates=["data_amostragem"])
 
-
 @st.cache_data
 def calcular(assinatura_dados, leituras: pd.DataFrame):
     return calcular_base_completa(leituras)
-
 
 def get_base_calculada():
     leituras = carregar_leituras()
@@ -181,7 +149,6 @@ def get_base_calculada():
         return pd.DataFrame()
     assinatura = hash(pd.util.hash_pandas_object(leituras, index=True).values.tobytes())
     return calcular(assinatura, leituras)
-
 
 # ============================================================
 # NAVEGAÇÃO
@@ -199,7 +166,6 @@ if pagina == "➕ Cadastrar Dados":
     st.title("➕ Cadastrar Novos Dados")
     equipamentos = carregar_equipamentos()
     aba_equip, aba_leitura, aba_exclusao = st.tabs(["Novo Equipamento", "Nova Leitura de Gás", "🗑️ Gerenciar / Excluir"])
-
     with aba_equip:
         st.subheader("Cadastrar novo transformador")
         with st.form("form_equipamento", clear_on_submit=True):
@@ -241,7 +207,6 @@ if pagina == "➕ Cadastrar Dados":
             colunas_tabela = [c for c in ["id_transformador", "fabricante", "Fabricante", "ano_fabricacao", "Ano de Fabricação", "potencia_kva", "Potência KVA", "tensao_kv", "Tensão KV", "volume_oleo", "Volume de Óleo", "ativo"] if c in equipamentos.columns]
             st.dataframe(equipamentos[colunas_tabela], use_container_width=True, hide_index=True)
             st.download_button("⬇️ Baixar equipamentos.csv atualizado", data=equipamentos.to_csv(index=False).encode("utf-8"), file_name="equipamentos.csv", mime="text/csv")
-
             if supabase_configurado() and "id" in equipamentos.columns:
                 st.markdown("---")
                 st.subheader("Ativar / Inativar equipamento")
@@ -256,7 +221,6 @@ if pagina == "➕ Cadastrar Dados":
                         st.rerun()
                     except requests.RequestException as erro:
                         st.error(f"Erro ao atualizar o status do equipamento: {erro}")
-
     with aba_leitura:
         st.subheader("Registrar novo resultado de gás (DGA)")
         equipamentos_ativos = equipamentos[equipamentos["ativo"] == True].copy() if not equipamentos.empty and "ativo" in equipamentos.columns else equipamentos
@@ -297,7 +261,6 @@ if pagina == "➕ Cadastrar Dados":
         st.markdown("---")
         st.caption("Limiares de referência (IEC/IEEE) usados no sinal de alerta por gás:")
         st.dataframe(pd.DataFrame([{"Gás": g, "Limiar (ppm)": v} for g, v in LIMIARES_IEC.items()]), use_container_width=True)
-
     with aba_exclusao:
         st.subheader("Gerenciar registros DGA")
         if not supabase_configurado():
@@ -354,18 +317,29 @@ else:
     equipamentos = carregar_equipamentos()
     if not equipamentos.empty and "ativo" in equipamentos.columns:
         ativos = set(equipamentos.loc[equipamentos["ativo"] == True, "id_transformador"].astype(str))
-        transformadores = sorted([str(x) for x in df["id_transformador"].unique() if str(x) in ativos])
+        transformadores = sorted(ativos)
+    elif not equipamentos.empty and "id_transformador" in equipamentos.columns:
+        transformadores = sorted(equipamentos["id_transformador"].astype(str).unique())
     else:
-        transformadores = sorted(df["id_transformador"].unique())
+        transformadores = sorted(df["id_transformador"].astype(str).unique())
     if not transformadores:
-        st.warning("Não há equipamentos ativos com dados DGA disponíveis.")
+        st.warning("Não há equipamentos cadastrados para exibição.")
         st.stop()
     transformador_sel = st.sidebar.selectbox("Transformador", transformadores)
-    df_tr = df[df["id_transformador"] == transformador_sel]
-    gases_disponiveis = sorted(df_tr["gas"].unique())
+    df_tr = df[df["id_transformador"].astype(str) == str(transformador_sel)]
+    gases_disponiveis = sorted(df_tr["gas"].unique()) if not df_tr.empty else []
     gas_sel = st.sidebar.selectbox("Gás", ["(Todos)"] + gases_disponiveis)
     df_filtrado = df_tr[df_tr["gas"] == gas_sel] if gas_sel != "(Todos)" else df_tr
     st.subheader(f"Transformador: {transformador_sel}")
+    if df_tr.empty:
+        st.info("Este equipamento está cadastrado e ativo, mas ainda não possui resultados DGA registrados.")
+        st.markdown("---")
+        st.subheader("Informações do equipamento")
+        equipamento_info = equipamentos[equipamentos["id_transformador"].astype(str) == str(transformador_sel)] if not equipamentos.empty and "id_transformador" in equipamentos.columns else pd.DataFrame()
+        if not equipamento_info.empty:
+            colunas_info = [c for c in ["id_transformador", "fabricante", "ano_fabricacao", "potencia_kva", "tensao_kv", "volume_oleo", "ativo"] if c in equipamento_info.columns]
+            st.dataframe(equipamento_info[colunas_info], use_container_width=True, hide_index=True)
+        st.stop()
     col1, col2, col3 = st.columns(3)
     total = len(df_filtrado)
     criticos = (df_filtrado["classificacao_final"] == "Crítico").sum()
@@ -375,7 +349,6 @@ else:
     col3.metric("🔴 Crítico", int(criticos))
     st.markdown("---")
     st.subheader("Evolução dos Gases ao Longo do Tempo")
-
     def plot_gas(df_gas, gas_nome, height):
         df_gas = df_gas.sort_values("data_amostragem")
         fig = go.Figure()
@@ -387,7 +360,6 @@ else:
             fig.add_trace(go.Scatter(x=df_gas["data_amostragem"], y=df_gas["ewma"], mode="lines", name="EWMA", line=dict(color="orange", dash="dot")))
         fig.update_layout(title=f"Gás: {gas_nome}", xaxis_title="Data", yaxis_title="Concentração (ppm)", height=height)
         return fig
-
     if gas_sel == "(Todos)":
         for gas in gases_disponiveis:
             df_gas = df_tr[df_tr["gas"] == gas]
@@ -395,7 +367,6 @@ else:
                 st.plotly_chart(plot_gas(df_gas, gas, 350), use_container_width=True)
     else:
         st.plotly_chart(plot_gas(df_filtrado, gas_sel, 450), use_container_width=True)
-
     st.markdown("---")
     st.subheader("Classificação Final por Gás")
     resumo = df_tr.groupby(["gas", "classificacao_final"]).size().reset_index(name="count")

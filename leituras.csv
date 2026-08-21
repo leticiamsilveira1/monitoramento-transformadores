@@ -1,0 +1,2073 @@
+id_transformador,data_amostragem,condicao_operacao,gas,valor_ppm
+TR01,2026-02-06,Normal,Acetileno,0.0
+TR01,2025-07-30,Normal,Acetileno,0.0
+TR01,2024-12-31,Normal,Acetileno,0.0
+TR01,2024-06-28,Normal,Acetileno,0.0
+TR01,2023-02-14,Normal,Acetileno,0.0
+TR01,2022-07-01,Normal,Acetileno,0.0
+TR01,2021-07-25,Normal,Acetileno,0.0
+TR01,2020-08-31,Normal,Acetileno,0.0
+TR01,2019-12-13,Normal,Acetileno,0.0
+TR01,2019-04-03,Normal,Acetileno,0.0
+TR01,2018-09-19,Normal,Acetileno,0.0
+TR01,2018-03-15,Normal,Acetileno,0.0
+TR01,2017-08-02,Normal,Acetileno,0.0
+TR01,2026-02-06,Normal,Dióxido de Carbono,2404.0
+TR01,2025-07-30,Normal,Dióxido de Carbono,1733.0
+TR01,2024-12-31,Normal,Dióxido de Carbono,2013.0
+TR01,2024-06-28,Normal,Dióxido de Carbono,1750.0
+TR01,2023-02-14,Normal,Dióxido de Carbono,1201.0
+TR01,2022-07-01,Normal,Dióxido de Carbono,1174.0
+TR01,2021-07-25,Normal,Dióxido de Carbono,777.0
+TR01,2020-08-31,Normal,Dióxido de Carbono,962.0
+TR01,2019-12-13,Normal,Dióxido de Carbono,362.0
+TR01,2019-04-03,Normal,Dióxido de Carbono,729.0
+TR01,2018-09-19,Normal,Dióxido de Carbono,266.0
+TR01,2018-03-15,Normal,Dióxido de Carbono,220.0
+TR01,2017-08-02,Normal,Dióxido de Carbono,214.0
+TR01,2026-02-06,Normal,Etano,0.0
+TR01,2025-07-30,Normal,Etano,0.0
+TR01,2024-12-31,Normal,Etano,0.0
+TR01,2024-06-28,Normal,Etano,1.0
+TR01,2023-02-14,Normal,Etano,0.0
+TR01,2022-07-01,Normal,Etano,1.0
+TR01,2021-07-25,Normal,Etano,0.0
+TR01,2020-08-31,Normal,Etano,0.0
+TR01,2019-12-13,Normal,Etano,0.0
+TR01,2019-04-03,Normal,Etano,0.0
+TR01,2018-09-19,Normal,Etano,0.0
+TR01,2018-03-15,Normal,Etano,0.0
+TR01,2017-08-02,Normal,Etano,0.0
+TR01,2026-02-06,Normal,Etileno,14.0
+TR01,2025-07-30,Normal,Etileno,0.0
+TR01,2024-12-31,Normal,Etileno,0.0
+TR01,2024-06-28,Normal,Etileno,0.0
+TR01,2023-02-14,Normal,Etileno,0.0
+TR01,2022-07-01,Normal,Etileno,0.0
+TR01,2021-07-25,Normal,Etileno,0.0
+TR01,2020-08-31,Normal,Etileno,0.0
+TR01,2019-12-13,Normal,Etileno,0.0
+TR01,2019-04-03,Normal,Etileno,3.0
+TR01,2018-09-19,Normal,Etileno,0.0
+TR01,2018-03-15,Normal,Etileno,0.0
+TR01,2017-08-02,Normal,Etileno,16.0
+TR01,2026-02-06,Normal,Hidrogênio,66.0
+TR01,2025-07-30,Normal,Hidrogênio,190.0
+TR01,2024-12-31,Normal,Hidrogênio,12.0
+TR01,2024-06-28,Normal,Hidrogênio,6.0
+TR01,2023-02-14,Normal,Hidrogênio,9.0
+TR01,2022-07-01,Normal,Hidrogênio,7.0
+TR01,2021-07-25,Normal,Hidrogênio,24.0
+TR01,2020-08-31,Normal,Hidrogênio,0.0
+TR01,2019-12-13,Normal,Hidrogênio,97.0
+TR01,2019-04-03,Normal,Hidrogênio,0.0
+TR01,2018-09-19,Normal,Hidrogênio,25.0
+TR01,2018-03-15,Normal,Hidrogênio,7.0
+TR01,2017-08-02,Normal,Hidrogênio,7.0
+TR01,2026-02-06,Normal,Metano,1.0
+TR01,2025-07-30,Normal,Metano,4.0
+TR01,2024-12-31,Normal,Metano,2.0
+TR01,2024-06-28,Normal,Metano,5.0
+TR01,2023-02-14,Normal,Metano,4.0
+TR01,2022-07-01,Normal,Metano,3.0
+TR01,2021-07-25,Normal,Metano,2.0
+TR01,2020-08-31,Normal,Metano,0.0
+TR01,2019-12-13,Normal,Metano,1.0
+TR01,2019-04-03,Normal,Metano,0.0
+TR01,2018-09-19,Normal,Metano,0.0
+TR01,2018-03-15,Normal,Metano,1.0
+TR01,2017-08-02,Normal,Metano,0.0
+TR01,2026-02-06,Normal,Monóxido de Carbono,362.0
+TR01,2025-07-30,Normal,Monóxido de Carbono,316.0
+TR01,2024-12-31,Normal,Monóxido de Carbono,328.0
+TR01,2024-06-28,Normal,Monóxido de Carbono,369.0
+TR01,2023-02-14,Normal,Monóxido de Carbono,265.0
+TR01,2022-07-01,Normal,Monóxido de Carbono,247.0
+TR01,2021-07-25,Normal,Monóxido de Carbono,186.0
+TR01,2020-08-31,Normal,Monóxido de Carbono,198.0
+TR01,2019-12-13,Normal,Monóxido de Carbono,110.0
+TR01,2019-04-03,Normal,Monóxido de Carbono,168.0
+TR01,2018-09-19,Normal,Monóxido de Carbono,98.0
+TR01,2018-03-15,Normal,Monóxido de Carbono,94.0
+TR01,2017-08-02,Normal,Monóxido de Carbono,122.0
+TR02,2026-02-19,Normal,Acetileno,0.0
+TR02,2025-07-30,Normal,Acetileno,0.0
+TR02,2024-12-30,Normal,Acetileno,0.0
+TR02,2024-07-01,Normal,Acetileno,0.0
+TR02,2023-02-14,Normal,Acetileno,0.0
+TR02,2022-07-01,Normal,Acetileno,0.0
+TR02,2021-07-24,Normal,Acetileno,0.0
+TR02,2020-08-31,Normal,Acetileno,0.0
+TR02,2019-12-12,Normal,Acetileno,0.0
+TR02,2019-04-03,Normal,Acetileno,0.0
+TR02,2019-01-17,Normal,Acetileno,0.0
+TR02,2018-03-15,Normal,Acetileno,0.0
+TR02,2026-02-19,Normal,Dióxido de Carbono,5393.0
+TR02,2025-07-30,Normal,Dióxido de Carbono,3699.0
+TR02,2024-12-30,Normal,Dióxido de Carbono,3894.0
+TR02,2024-07-01,Normal,Dióxido de Carbono,4218.0
+TR02,2023-02-14,Normal,Dióxido de Carbono,2342.0
+TR02,2022-07-01,Normal,Dióxido de Carbono,2244.0
+TR02,2021-07-24,Normal,Dióxido de Carbono,1679.0
+TR02,2020-08-31,Normal,Dióxido de Carbono,1699.0
+TR02,2019-12-12,Normal,Dióxido de Carbono,441.0
+TR02,2019-04-03,Normal,Dióxido de Carbono,1248.0
+TR02,2019-01-17,Normal,Dióxido de Carbono,356.0
+TR02,2018-03-15,Normal,Dióxido de Carbono,220.0
+TR02,2026-02-19,Normal,Etano,1.0
+TR02,2025-07-30,Normal,Etano,1.0
+TR02,2024-12-30,Normal,Etano,2.0
+TR02,2024-07-01,Normal,Etano,0.0
+TR02,2023-02-14,Normal,Etano,0.0
+TR02,2022-07-01,Normal,Etano,1.0
+TR02,2021-07-24,Normal,Etano,0.0
+TR02,2020-08-31,Normal,Etano,0.0
+TR02,2019-12-12,Normal,Etano,0.0
+TR02,2019-04-03,Normal,Etano,0.0
+TR02,2019-01-17,Normal,Etano,0.0
+TR02,2018-03-15,Normal,Etano,0.0
+TR02,2026-02-19,Normal,Etileno,2.0
+TR02,2025-07-30,Normal,Etileno,1.0
+TR02,2024-12-30,Normal,Etileno,0.0
+TR02,2024-07-01,Normal,Etileno,0.0
+TR02,2023-02-14,Normal,Etileno,1.0
+TR02,2022-07-01,Normal,Etileno,1.0
+TR02,2021-07-24,Normal,Etileno,0.0
+TR02,2020-08-31,Normal,Etileno,0.0
+TR02,2019-12-12,Normal,Etileno,0.0
+TR02,2019-04-03,Normal,Etileno,1.0
+TR02,2019-01-17,Normal,Etileno,0.0
+TR02,2018-03-15,Normal,Etileno,0.0
+TR02,2026-02-19,Normal,Hidrogênio,2.0
+TR02,2025-07-30,Normal,Hidrogênio,4.0
+TR02,2024-12-30,Normal,Hidrogênio,10.0
+TR02,2024-07-01,Normal,Hidrogênio,23.0
+TR02,2023-02-14,Normal,Hidrogênio,17.0
+TR02,2022-07-01,Normal,Hidrogênio,9.0
+TR02,2021-07-24,Normal,Hidrogênio,0.0
+TR02,2020-08-31,Normal,Hidrogênio,7.0
+TR02,2019-12-12,Normal,Hidrogênio,9.0
+TR02,2019-04-03,Normal,Hidrogênio,0.0
+TR02,2019-01-17,Normal,Hidrogênio,61.0
+TR02,2018-03-15,Normal,Hidrogênio,7.0
+TR02,2026-02-19,Normal,Metano,11.0
+TR02,2025-07-30,Normal,Metano,4.0
+TR02,2024-12-30,Normal,Metano,5.0
+TR02,2024-07-01,Normal,Metano,6.0
+TR02,2023-02-14,Normal,Metano,6.0
+TR02,2022-07-01,Normal,Metano,7.0
+TR02,2021-07-24,Normal,Metano,4.0
+TR02,2020-08-31,Normal,Metano,2.0
+TR02,2019-12-12,Normal,Metano,1.0
+TR02,2019-04-03,Normal,Metano,0.0
+TR02,2019-01-17,Normal,Metano,1.0
+TR02,2018-03-15,Normal,Metano,1.0
+TR02,2026-02-19,Normal,Monóxido de Carbono,1470.0
+TR02,2025-07-30,Normal,Monóxido de Carbono,1374.0
+TR02,2024-12-30,Normal,Monóxido de Carbono,1404.0
+TR02,2024-07-01,Normal,Monóxido de Carbono,1838.0
+TR02,2023-02-14,Normal,Monóxido de Carbono,642.0
+TR02,2022-07-01,Normal,Monóxido de Carbono,756.0
+TR02,2021-07-24,Normal,Monóxido de Carbono,488.0
+TR02,2020-08-31,Normal,Monóxido de Carbono,571.0
+TR02,2019-12-12,Normal,Monóxido de Carbono,146.0
+TR02,2019-04-03,Normal,Monóxido de Carbono,177.0
+TR02,2019-01-17,Normal,Monóxido de Carbono,67.0
+TR02,2018-03-15,Normal,Monóxido de Carbono,94.0
+TR03,2022-11-09,Normal,Acetileno,0.0
+TR03,2023-04-15,Normal,Acetileno,0.0
+TR03,2023-11-01,Normal,Acetileno,0.0
+TR03,2024-04-20,Normal,Acetileno,0.0
+TR03,2024-10-24,Normal,Acetileno,0.0
+TR03,2025-04-22,Normal,Acetileno,0.0
+TR03,2025-10-25,Normal,Acetileno,0.0
+TR03,2026-04-22,Normal,Acetileno,0.0
+TR03,2026-06-07,Normal,Acetileno,0.0
+TR03,2022-11-09,Normal,Dióxido de Carbono,7729.0
+TR03,2023-04-15,Normal,Dióxido de Carbono,7782.0
+TR03,2023-11-01,Normal,Dióxido de Carbono,7633.0
+TR03,2024-04-20,Normal,Dióxido de Carbono,13682.0
+TR03,2024-10-24,Normal,Dióxido de Carbono,12890.0
+TR03,2025-04-22,Normal,Dióxido de Carbono,17085.0
+TR03,2025-10-25,Normal,Dióxido de Carbono,7042.0
+TR03,2026-04-22,Normal,Dióxido de Carbono,11348.0
+TR03,2026-06-07,Normal,Dióxido de Carbono,9885.0
+TR03,2022-11-09,Normal,Etano,2.0
+TR03,2023-04-15,Normal,Etano,2.0
+TR03,2023-11-01,Normal,Etano,5.0
+TR03,2024-04-20,Normal,Etano,8.0
+TR03,2024-10-24,Normal,Etano,2.0
+TR03,2025-04-22,Normal,Etano,5.0
+TR03,2025-10-25,Normal,Etano,1.0
+TR03,2026-04-22,Normal,Etano,10.0
+TR03,2026-06-07,Normal,Etano,8.0
+TR03,2022-11-09,Normal,Etileno,1.0
+TR03,2023-04-15,Normal,Etileno,0.0
+TR03,2023-11-01,Normal,Etileno,2.0
+TR03,2024-04-20,Normal,Etileno,1.0
+TR03,2024-10-24,Normal,Etileno,0.0
+TR03,2025-04-22,Normal,Etileno,0.0
+TR03,2025-10-25,Normal,Etileno,0.0
+TR03,2026-04-22,Normal,Etileno,4.0
+TR03,2026-06-07,Normal,Etileno,3.0
+TR03,2022-11-09,Normal,Hidrogênio,2.0
+TR03,2023-04-15,Normal,Hidrogênio,5.0
+TR03,2023-11-01,Normal,Hidrogênio,5.0
+TR03,2024-04-20,Normal,Hidrogênio,7.0
+TR03,2024-10-24,Normal,Hidrogênio,2.0
+TR03,2025-04-22,Normal,Hidrogênio,4.0
+TR03,2025-10-25,Normal,Hidrogênio,13.0
+TR03,2026-04-22,Normal,Hidrogênio,6.0
+TR03,2026-06-07,Normal,Hidrogênio,3.0
+TR03,2022-11-09,Normal,Metano,82.0
+TR03,2023-04-15,Normal,Metano,65.0
+TR03,2023-11-01,Normal,Metano,130.0
+TR03,2024-04-20,Normal,Metano,172.0
+TR03,2024-10-24,Normal,Metano,126.0
+TR03,2025-04-22,Normal,Metano,147.0
+TR03,2025-10-25,Normal,Metano,86.0
+TR03,2026-04-22,Normal,Metano,95.0
+TR03,2026-06-07,Normal,Metano,84.0
+TR03,2022-11-09,Normal,Monóxido de Carbono,341.0
+TR03,2023-04-15,Normal,Monóxido de Carbono,324.0
+TR03,2023-11-01,Normal,Monóxido de Carbono,371.0
+TR03,2024-04-20,Normal,Monóxido de Carbono,613.0
+TR03,2024-10-24,Normal,Monóxido de Carbono,756.0
+TR03,2025-04-22,Normal,Monóxido de Carbono,585.0
+TR03,2025-10-25,Normal,Monóxido de Carbono,305.0
+TR03,2026-04-22,Normal,Monóxido de Carbono,363.0
+TR03,2026-06-07,Normal,Monóxido de Carbono,281.0
+TR04,2023-09-29,Normal,Acetileno,0.0
+TR04,2024-09-30,Normal,Acetileno,0.0
+TR04,2024-10-07,Normal,Acetileno,0.0
+TR04,2025-01-22,Normal,Acetileno,0.0
+TR04,2025-07-25,Normal,Acetileno,0.0
+TR04,2026-05-28,Normal,Acetileno,0.0
+TR04,2023-09-29,Normal,Dióxido de Carbono,2707.0
+TR04,2024-09-30,Normal,Dióxido de Carbono,1805.0
+TR04,2024-10-07,Normal,Dióxido de Carbono,1989.0
+TR04,2025-01-22,Normal,Dióxido de Carbono,3388.0
+TR04,2025-07-25,Normal,Dióxido de Carbono,4142.0
+TR04,2026-05-28,Normal,Dióxido de Carbono,1858.0
+TR04,2023-09-29,Normal,Etano,0.0
+TR04,2024-09-30,Normal,Etano,0.0
+TR04,2024-10-07,Normal,Etano,0.0
+TR04,2025-01-22,Normal,Etano,0.0
+TR04,2025-07-25,Normal,Etano,0.0
+TR04,2026-05-28,Normal,Etano,0.0
+TR04,2023-09-29,Normal,Etileno,8.0
+TR04,2024-09-30,Normal,Etileno,11.0
+TR04,2024-10-07,Normal,Etileno,13.0
+TR04,2025-01-22,Normal,Etileno,10.0
+TR04,2025-07-25,Normal,Etileno,4.0
+TR04,2026-05-28,Normal,Etileno,10.0
+TR04,2023-09-29,Normal,Hidrogênio,21.0
+TR04,2024-09-30,Normal,Hidrogênio,28.0
+TR04,2024-10-07,Normal,Hidrogênio,31.0
+TR04,2025-01-22,Normal,Hidrogênio,17.0
+TR04,2025-07-25,Normal,Hidrogênio,8.0
+TR04,2026-05-28,Normal,Hidrogênio,1.0
+TR04,2023-09-29,Normal,Metano,2.0
+TR04,2024-09-30,Normal,Metano,1.0
+TR04,2024-10-07,Normal,Metano,1.0
+TR04,2025-01-22,Normal,Metano,2.0
+TR04,2025-07-25,Normal,Metano,2.0
+TR04,2026-05-28,Normal,Metano,0.0
+TR04,2023-09-29,Normal,Monóxido de Carbono,264.0
+TR04,2024-09-30,Normal,Monóxido de Carbono,215.0
+TR04,2024-10-07,Normal,Monóxido de Carbono,243.0
+TR04,2025-01-22,Normal,Monóxido de Carbono,468.0
+TR04,2025-07-25,Normal,Monóxido de Carbono,353.0
+TR04,2026-05-28,Normal,Monóxido de Carbono,205.0
+TR05,2023-08-07,Normal,Acetileno,0.0
+TR05,2023-12-21,Normal,Acetileno,0.0
+TR05,2024-06-13,Normal,Acetileno,0.0
+TR05,2024-12-29,Normal,Acetileno,0.0
+TR05,2025-05-08,Normal,Acetileno,0.0
+TR05,2025-06-11,Normal,Acetileno,0.0
+TR05,2025-11-26,Normal,Acetileno,0.0
+TR05,2026-05-20,Normal,Acetileno,0.0
+TR05,2023-08-07,Normal,Dióxido de Carbono,1473.0
+TR05,2023-12-21,Normal,Dióxido de Carbono,2223.0
+TR05,2024-06-13,Normal,Dióxido de Carbono,2385.0
+TR05,2024-12-29,Normal,Dióxido de Carbono,1777.0
+TR05,2025-05-08,Normal,Dióxido de Carbono,1347.0
+TR05,2025-06-11,Normal,Dióxido de Carbono,2437.0
+TR05,2025-11-26,Normal,Dióxido de Carbono,813.0
+TR05,2026-05-20,Normal,Dióxido de Carbono,1604.0
+TR05,2023-08-07,Normal,Etano,0.0
+TR05,2023-12-21,Normal,Etano,0.0
+TR05,2024-06-13,Normal,Etano,0.0
+TR05,2024-12-29,Normal,Etano,0.0
+TR05,2025-05-08,Normal,Etano,0.0
+TR05,2025-06-11,Normal,Etano,0.0
+TR05,2025-11-26,Normal,Etano,1.0
+TR05,2026-05-20,Normal,Etano,0.0
+TR05,2023-08-07,Normal,Etileno,0.0
+TR05,2023-12-21,Normal,Etileno,1.0
+TR05,2024-06-13,Normal,Etileno,1.0
+TR05,2024-12-29,Normal,Etileno,2.0
+TR05,2025-05-08,Normal,Etileno,5.0
+TR05,2025-06-11,Normal,Etileno,0.0
+TR05,2025-11-26,Normal,Etileno,0.0
+TR05,2026-05-20,Normal,Etileno,3.0
+TR05,2023-08-07,Normal,Hidrogênio,19.0
+TR05,2023-12-21,Normal,Hidrogênio,0.0
+TR05,2024-06-13,Normal,Hidrogênio,11.0
+TR05,2024-12-29,Normal,Hidrogênio,10.0
+TR05,2025-05-08,Normal,Hidrogênio,17.0
+TR05,2025-06-11,Normal,Hidrogênio,19.0
+TR05,2025-11-26,Normal,Hidrogênio,10.0
+TR05,2026-05-20,Normal,Hidrogênio,9.0
+TR05,2023-08-07,Normal,Metano,7.0
+TR05,2023-12-21,Normal,Metano,3.0
+TR05,2024-06-13,Normal,Metano,1.0
+TR05,2024-12-29,Normal,Metano,1.0
+TR05,2025-05-08,Normal,Metano,2.0
+TR05,2025-06-11,Normal,Metano,3.0
+TR05,2025-11-26,Normal,Metano,2.0
+TR05,2026-05-20,Normal,Metano,2.0
+TR05,2023-08-07,Normal,Monóxido de Carbono,156.0
+TR05,2023-12-21,Normal,Monóxido de Carbono,207.0
+TR05,2024-06-13,Normal,Monóxido de Carbono,205.0
+TR05,2024-12-29,Normal,Monóxido de Carbono,99.0
+TR05,2025-05-08,Normal,Monóxido de Carbono,132.0
+TR05,2025-06-11,Normal,Monóxido de Carbono,220.0
+TR05,2025-11-26,Normal,Monóxido de Carbono,235.0
+TR05,2026-05-20,Normal,Monóxido de Carbono,116.0
+TR06,2023-10-25,Normal,Acetileno,0.0
+TR06,2024-04-28,Normal,Acetileno,0.0
+TR06,2025-06-27,Normal,Acetileno,0.0
+TR06,2025-11-08,Normal,Acetileno,0.0
+TR06,2025-11-24,Normal,Acetileno,0.0
+TR06,2026-05-14,Normal,Acetileno,0.0
+TR06,2023-10-25,Normal,Dióxido de Carbono,4138.0
+TR06,2024-04-28,Normal,Dióxido de Carbono,5190.0
+TR06,2025-06-27,Normal,Dióxido de Carbono,2390.0
+TR06,2025-11-08,Normal,Dióxido de Carbono,4671.0
+TR06,2025-11-24,Normal,Dióxido de Carbono,3885.0
+TR06,2026-05-14,Normal,Dióxido de Carbono,4351.0
+TR06,2023-10-25,Normal,Etano,0.0
+TR06,2024-04-28,Normal,Etano,2.0
+TR06,2025-06-27,Normal,Etano,0.0
+TR06,2025-11-08,Normal,Etano,1.0
+TR06,2025-11-24,Normal,Etano,1.0
+TR06,2026-05-14,Normal,Etano,2.0
+TR06,2023-10-25,Normal,Etileno,22.0
+TR06,2024-04-28,Normal,Etileno,24.0
+TR06,2025-06-27,Normal,Etileno,10.0
+TR06,2025-11-08,Normal,Etileno,5.0
+TR06,2025-11-24,Normal,Etileno,10.0
+TR06,2026-05-14,Normal,Etileno,20.0
+TR06,2023-10-25,Normal,Hidrogênio,7.0
+TR06,2024-04-28,Normal,Hidrogênio,3.0
+TR06,2025-06-27,Normal,Hidrogênio,14.0
+TR06,2025-11-08,Normal,Hidrogênio,4.0
+TR06,2025-11-24,Normal,Hidrogênio,1.0
+TR06,2026-05-14,Normal,Hidrogênio,3.0
+TR06,2023-10-25,Normal,Metano,20.0
+TR06,2024-04-28,Normal,Metano,13.0
+TR06,2025-06-27,Normal,Metano,9.0
+TR06,2025-11-08,Normal,Metano,16.0
+TR06,2025-11-24,Normal,Metano,10.0
+TR06,2026-05-14,Normal,Metano,15.0
+TR06,2023-10-25,Normal,Monóxido de Carbono,1315.0
+TR06,2024-04-28,Normal,Monóxido de Carbono,2327.0
+TR06,2025-06-27,Normal,Monóxido de Carbono,845.0
+TR06,2025-11-08,Normal,Monóxido de Carbono,828.0
+TR06,2025-11-24,Normal,Monóxido de Carbono,1064.0
+TR06,2026-05-14,Normal,Monóxido de Carbono,1541.0
+TR07,2022-01-25,Normal,Acetileno,0.0
+TR07,2022-07-07,Normal,Acetileno,0.0
+TR07,2023-02-15,Normal,Acetileno,0.0
+TR07,2023-07-28,Normal,Acetileno,0.0
+TR07,2024-01-28,Normal,Acetileno,0.0
+TR07,2024-05-13,Normal,Acetileno,0.0
+TR07,2025-03-19,Normal,Acetileno,0.0
+TR07,2025-12-05,Normal,Acetileno,0.0
+TR07,2026-05-27,Normal,Acetileno,0.0
+TR07,2022-01-25,Normal,Dióxido de Carbono,1240.0
+TR07,2022-07-07,Normal,Dióxido de Carbono,1601.0
+TR07,2023-02-15,Normal,Dióxido de Carbono,2223.0
+TR07,2023-07-28,Normal,Dióxido de Carbono,1289.0
+TR07,2024-01-28,Normal,Dióxido de Carbono,2604.0
+TR07,2024-05-13,Normal,Dióxido de Carbono,2372.0
+TR07,2025-03-19,Normal,Dióxido de Carbono,2530.0
+TR07,2025-12-05,Normal,Dióxido de Carbono,2833.0
+TR07,2026-05-27,Normal,Dióxido de Carbono,1319.0
+TR07,2022-01-25,Normal,Etano,0.0
+TR07,2022-07-07,Normal,Etano,0.0
+TR07,2023-02-15,Normal,Etano,0.0
+TR07,2023-07-28,Normal,Etano,0.0
+TR07,2024-01-28,Normal,Etano,0.0
+TR07,2024-05-13,Normal,Etano,0.0
+TR07,2025-03-19,Normal,Etano,1.0
+TR07,2025-12-05,Normal,Etano,1.0
+TR07,2026-05-27,Normal,Etano,0.0
+TR07,2022-01-25,Normal,Etileno,10.0
+TR07,2022-07-07,Normal,Etileno,10.0
+TR07,2023-02-15,Normal,Etileno,11.0
+TR07,2023-07-28,Normal,Etileno,7.0
+TR07,2024-01-28,Normal,Etileno,7.0
+TR07,2024-05-13,Normal,Etileno,7.0
+TR07,2025-03-19,Normal,Etileno,15.0
+TR07,2025-12-05,Normal,Etileno,8.0
+TR07,2026-05-27,Normal,Etileno,11.0
+TR07,2022-01-25,Normal,Hidrogênio,4.0
+TR07,2022-07-07,Normal,Hidrogênio,5.0
+TR07,2023-02-15,Normal,Hidrogênio,4.0
+TR07,2023-07-28,Normal,Hidrogênio,6.0
+TR07,2024-01-28,Normal,Hidrogênio,7.0
+TR07,2024-05-13,Normal,Hidrogênio,3.0
+TR07,2025-03-19,Normal,Hidrogênio,5.0
+TR07,2025-12-05,Normal,Hidrogênio,4.0
+TR07,2026-05-27,Normal,Hidrogênio,2.0
+TR07,2022-01-25,Normal,Metano,5.0
+TR07,2022-07-07,Normal,Metano,6.0
+TR07,2023-02-15,Normal,Metano,5.0
+TR07,2023-07-28,Normal,Metano,6.0
+TR07,2024-01-28,Normal,Metano,6.0
+TR07,2024-05-13,Normal,Metano,4.0
+TR07,2025-03-19,Normal,Metano,6.0
+TR07,2025-12-05,Normal,Metano,18.0
+TR07,2026-05-27,Normal,Metano,4.0
+TR07,2022-01-25,Normal,Monóxido de Carbono,607.0
+TR07,2022-07-07,Normal,Monóxido de Carbono,619.0
+TR07,2023-02-15,Normal,Monóxido de Carbono,712.0
+TR07,2023-07-28,Normal,Monóxido de Carbono,678.0
+TR07,2024-01-28,Normal,Monóxido de Carbono,1101.0
+TR07,2024-05-13,Normal,Monóxido de Carbono,919.0
+TR07,2025-03-19,Normal,Monóxido de Carbono,850.0
+TR07,2025-12-05,Normal,Monóxido de Carbono,1081.0
+TR07,2026-05-27,Normal,Monóxido de Carbono,581.0
+TR08,2020-06-24,Normal,Acetileno,0.0
+TR08,2021-01-22,Normal,Acetileno,0.0
+TR08,2021-09-15,Normal,Acetileno,0.0
+TR08,2022-03-11,Normal,Acetileno,0.0
+TR08,2022-08-29,Normal,Acetileno,0.0
+TR08,2023-03-03,Normal,Acetileno,0.0
+TR08,2023-08-18,Normal,Acetileno,0.0
+TR08,2024-03-19,Normal,Acetileno,0.0
+TR08,2024-10-29,Normal,Acetileno,0.0
+TR08,2025-08-25,Normal,Acetileno,0.0
+TR08,2026-04-09,Normal,Acetileno,0.0
+TR08,2020-06-24,Normal,Dióxido de Carbono,303.0
+TR08,2021-01-22,Normal,Dióxido de Carbono,498.0
+TR08,2021-09-15,Normal,Dióxido de Carbono,608.0
+TR08,2022-03-11,Normal,Dióxido de Carbono,776.0
+TR08,2022-08-29,Normal,Dióxido de Carbono,1195.0
+TR08,2023-03-03,Normal,Dióxido de Carbono,893.0
+TR08,2023-08-18,Normal,Dióxido de Carbono,680.0
+TR08,2024-03-19,Normal,Dióxido de Carbono,1262.0
+TR08,2024-10-29,Normal,Dióxido de Carbono,847.0
+TR08,2025-08-25,Normal,Dióxido de Carbono,1681.0
+TR08,2026-04-09,Normal,Dióxido de Carbono,1015.0
+TR08,2020-06-24,Normal,Etano,0.0
+TR08,2021-01-22,Normal,Etano,0.0
+TR08,2021-09-15,Normal,Etano,0.0
+TR08,2022-03-11,Normal,Etano,0.0
+TR08,2022-08-29,Normal,Etano,0.0
+TR08,2023-03-03,Normal,Etano,0.0
+TR08,2023-08-18,Normal,Etano,0.0
+TR08,2024-03-19,Normal,Etano,0.0
+TR08,2024-10-29,Normal,Etano,0.0
+TR08,2025-08-25,Normal,Etano,0.0
+TR08,2026-04-09,Normal,Etano,0.0
+TR08,2020-06-24,Normal,Etileno,0.0
+TR08,2021-01-22,Normal,Etileno,0.0
+TR08,2021-09-15,Normal,Etileno,0.0
+TR08,2022-03-11,Normal,Etileno,0.0
+TR08,2022-08-29,Normal,Etileno,0.0
+TR08,2023-03-03,Normal,Etileno,0.0
+TR08,2023-08-18,Normal,Etileno,0.0
+TR08,2024-03-19,Normal,Etileno,0.0
+TR08,2024-10-29,Normal,Etileno,0.0
+TR08,2025-08-25,Normal,Etileno,0.0
+TR08,2026-04-09,Normal,Etileno,0.0
+TR08,2020-06-24,Normal,Hidrogênio,1.0
+TR08,2021-01-22,Normal,Hidrogênio,6.0
+TR08,2021-09-15,Normal,Hidrogênio,4.0
+TR08,2022-03-11,Normal,Hidrogênio,10.0
+TR08,2022-08-29,Normal,Hidrogênio,19.0
+TR08,2023-03-03,Normal,Hidrogênio,12.0
+TR08,2023-08-18,Normal,Hidrogênio,14.0
+TR08,2024-03-19,Normal,Hidrogênio,7.0
+TR08,2024-10-29,Normal,Hidrogênio,9.0
+TR08,2025-08-25,Normal,Hidrogênio,11.0
+TR08,2026-04-09,Normal,Hidrogênio,10.0
+TR08,2020-06-24,Normal,Metano,1.0
+TR08,2021-01-22,Normal,Metano,2.0
+TR08,2021-09-15,Normal,Metano,3.0
+TR08,2022-03-11,Normal,Metano,3.0
+TR08,2022-08-29,Normal,Metano,5.0
+TR08,2023-03-03,Normal,Metano,2.0
+TR08,2023-08-18,Normal,Metano,3.0
+TR08,2024-03-19,Normal,Metano,2.0
+TR08,2024-10-29,Normal,Metano,3.0
+TR08,2025-08-25,Normal,Metano,5.0
+TR08,2026-04-09,Normal,Metano,3.0
+TR08,2020-06-24,Normal,Monóxido de Carbono,88.0
+TR08,2021-01-22,Normal,Monóxido de Carbono,163.0
+TR08,2021-09-15,Normal,Monóxido de Carbono,141.0
+TR08,2022-03-11,Normal,Monóxido de Carbono,153.0
+TR08,2022-08-29,Normal,Monóxido de Carbono,227.0
+TR08,2023-03-03,Normal,Monóxido de Carbono,95.0
+TR08,2023-08-18,Normal,Monóxido de Carbono,122.0
+TR08,2024-03-19,Normal,Monóxido de Carbono,230.0
+TR08,2024-10-29,Normal,Monóxido de Carbono,88.0
+TR08,2025-08-25,Normal,Monóxido de Carbono,132.0
+TR08,2026-04-09,Normal,Monóxido de Carbono,171.0
+TR09,2020-03-01,Normal,Acetileno,0.0
+TR09,2020-03-05,Normal,Acetileno,0.0
+TR09,2020-07-09,Normal,Acetileno,0.0
+TR09,2021-02-10,Normal,Acetileno,0.0
+TR09,2021-08-07,Normal,Acetileno,0.0
+TR09,2022-02-14,Normal,Acetileno,0.0
+TR09,2022-07-23,Normal,Acetileno,0.0
+TR09,2023-02-07,Normal,Acetileno,0.0
+TR09,2023-10-12,Normal,Acetileno,1.0
+TR09,2024-03-18,Normal,Acetileno,0.5
+TR09,2024-10-01,Normal,Acetileno,0.0
+TR09,2025-03-29,Normal,Acetileno,0.5
+TR09,2025-09-09,Normal,Acetileno,0.5
+TR09,2026-03-22,Normal,Acetileno,0.9
+TR09,2020-03-01,Normal,Dióxido de Carbono,488.0
+TR09,2020-03-05,Normal,Dióxido de Carbono,557.0
+TR09,2020-07-09,Normal,Dióxido de Carbono,684.0
+TR09,2021-02-10,Normal,Dióxido de Carbono,578.0
+TR09,2021-08-07,Normal,Dióxido de Carbono,495.0
+TR09,2022-02-14,Normal,Dióxido de Carbono,697.0
+TR09,2022-07-23,Normal,Dióxido de Carbono,685.0
+TR09,2023-02-07,Normal,Dióxido de Carbono,906.0
+TR09,2023-10-12,Normal,Dióxido de Carbono,1296.0
+TR09,2024-03-18,Normal,Dióxido de Carbono,1333.2
+TR09,2024-10-01,Normal,Dióxido de Carbono,1494.6
+TR09,2025-03-29,Normal,Dióxido de Carbono,1862.2
+TR09,2025-09-09,Normal,Dióxido de Carbono,1704.2
+TR09,2026-03-22,Normal,Dióxido de Carbono,1680.9
+TR09,2020-03-01,Normal,Etano,0.0
+TR09,2020-03-05,Normal,Etano,0.0
+TR09,2020-07-09,Normal,Etano,0.0
+TR09,2021-02-10,Normal,Etano,0.0
+TR09,2021-08-07,Normal,Etano,0.0
+TR09,2022-02-14,Normal,Etano,0.0
+TR09,2022-07-23,Normal,Etano,0.0
+TR09,2023-02-07,Normal,Etano,0.0
+TR09,2023-10-12,Normal,Etano,1.0
+TR09,2024-03-18,Normal,Etano,0.3
+TR09,2024-10-01,Normal,Etano,0.0
+TR09,2025-03-29,Normal,Etano,0.2
+TR09,2025-09-09,Normal,Etano,0.3
+TR09,2026-03-22,Normal,Etano,0.8
+TR09,2020-03-01,Normal,Etileno,0.0
+TR09,2020-03-05,Normal,Etileno,0.0
+TR09,2020-07-09,Normal,Etileno,0.0
+TR09,2021-02-10,Normal,Etileno,0.0
+TR09,2021-08-07,Normal,Etileno,0.0
+TR09,2022-02-14,Normal,Etileno,0.0
+TR09,2022-07-23,Normal,Etileno,0.0
+TR09,2023-02-07,Normal,Etileno,0.0
+TR09,2023-10-12,Normal,Etileno,0.0
+TR09,2024-03-18,Normal,Etileno,0.1
+TR09,2024-10-01,Normal,Etileno,0.0
+TR09,2025-03-29,Normal,Etileno,0.0
+TR09,2025-09-09,Normal,Etileno,0.2
+TR09,2026-03-22,Normal,Etileno,1.1
+TR09,2020-03-01,Normal,Hidrogênio,9.0
+TR09,2020-03-05,Normal,Hidrogênio,9.0
+TR09,2020-07-09,Normal,Hidrogênio,9.0
+TR09,2021-02-10,Normal,Hidrogênio,11.0
+TR09,2021-08-07,Normal,Hidrogênio,10.0
+TR09,2022-02-14,Normal,Hidrogênio,14.0
+TR09,2022-07-23,Normal,Hidrogênio,20.0
+TR09,2023-02-07,Normal,Hidrogênio,25.0
+TR09,2023-10-12,Normal,Hidrogênio,12.0
+TR09,2024-03-18,Normal,Hidrogênio,10.1
+TR09,2024-10-01,Normal,Hidrogênio,15.6
+TR09,2025-03-29,Normal,Hidrogênio,8.0
+TR09,2025-09-09,Normal,Hidrogênio,3.8
+TR09,2026-03-22,Normal,Hidrogênio,10.5
+TR09,2020-03-01,Normal,Metano,3.0
+TR09,2020-03-05,Normal,Metano,2.0
+TR09,2020-07-09,Normal,Metano,3.0
+TR09,2021-02-10,Normal,Metano,2.0
+TR09,2021-08-07,Normal,Metano,3.0
+TR09,2022-02-14,Normal,Metano,5.0
+TR09,2022-07-23,Normal,Metano,5.0
+TR09,2023-02-07,Normal,Metano,8.0
+TR09,2023-10-12,Normal,Metano,9.0
+TR09,2024-03-18,Normal,Metano,6.0
+TR09,2024-10-01,Normal,Metano,2.4
+TR09,2025-03-29,Normal,Metano,5.0
+TR09,2025-09-09,Normal,Metano,5.4
+TR09,2026-03-22,Normal,Metano,7.2
+TR09,2020-03-01,Normal,Monóxido de Carbono,109.0
+TR09,2020-03-05,Normal,Monóxido de Carbono,102.0
+TR09,2020-07-09,Normal,Monóxido de Carbono,136.0
+TR09,2021-02-10,Normal,Monóxido de Carbono,109.0
+TR09,2021-08-07,Normal,Monóxido de Carbono,146.0
+TR09,2022-02-14,Normal,Monóxido de Carbono,242.0
+TR09,2022-07-23,Normal,Monóxido de Carbono,246.0
+TR09,2023-02-07,Normal,Monóxido de Carbono,318.0
+TR09,2023-10-12,Normal,Monóxido de Carbono,329.0
+TR09,2024-03-18,Normal,Monóxido de Carbono,484.4
+TR09,2024-10-01,Normal,Monóxido de Carbono,889.5
+TR09,2025-03-29,Normal,Monóxido de Carbono,467.9
+TR09,2025-09-09,Normal,Monóxido de Carbono,517.6
+TR09,2026-03-22,Normal,Monóxido de Carbono,587.0
+TR10,2020-06-24,Normal,Acetileno,0.0
+TR10,2021-01-22,Normal,Acetileno,0.0
+TR10,2021-09-14,Normal,Acetileno,0.0
+TR10,2022-03-11,Normal,Acetileno,0.0
+TR10,2022-08-30,Normal,Acetileno,0.0
+TR10,2023-03-03,Normal,Acetileno,0.0
+TR10,2023-08-18,Normal,Acetileno,0.0
+TR10,2024-03-29,Normal,Acetileno,0.0
+TR10,2024-10-29,Normal,Acetileno,0.0
+TR10,2025-08-25,Normal,Acetileno,0.0
+TR10,2026-04-09,Atenção,Acetileno,0.0
+TR10,2020-06-24,Normal,Dióxido de Carbono,229.0
+TR10,2021-01-22,Normal,Dióxido de Carbono,496.0
+TR10,2021-09-14,Normal,Dióxido de Carbono,538.0
+TR10,2022-03-11,Normal,Dióxido de Carbono,610.0
+TR10,2022-08-30,Normal,Dióxido de Carbono,2615.0
+TR10,2023-03-03,Normal,Dióxido de Carbono,2141.0
+TR10,2023-08-18,Normal,Dióxido de Carbono,1020.0
+TR10,2024-03-29,Normal,Dióxido de Carbono,2280.0
+TR10,2024-10-29,Normal,Dióxido de Carbono,3888.0
+TR10,2025-08-25,Normal,Dióxido de Carbono,2850.0
+TR10,2026-04-09,Atenção,Dióxido de Carbono,3035.0
+TR10,2020-06-24,Normal,Etano,0.0
+TR10,2021-01-22,Normal,Etano,0.0
+TR10,2021-09-14,Normal,Etano,0.0
+TR10,2022-03-11,Normal,Etano,0.0
+TR10,2022-08-30,Normal,Etano,0.0
+TR10,2023-03-03,Normal,Etano,0.0
+TR10,2023-08-18,Normal,Etano,0.0
+TR10,2024-03-29,Normal,Etano,0.0
+TR10,2024-10-29,Normal,Etano,0.0
+TR10,2025-08-25,Normal,Etano,0.0
+TR10,2026-04-09,Atenção,Etano,0.0
+TR10,2020-06-24,Normal,Etileno,0.0
+TR10,2021-01-22,Normal,Etileno,0.0
+TR10,2021-09-14,Normal,Etileno,0.0
+TR10,2022-03-11,Normal,Etileno,0.0
+TR10,2022-08-30,Normal,Etileno,0.0
+TR10,2023-03-03,Normal,Etileno,0.0
+TR10,2023-08-18,Normal,Etileno,0.0
+TR10,2024-03-29,Normal,Etileno,0.0
+TR10,2024-10-29,Normal,Etileno,0.0
+TR10,2025-08-25,Normal,Etileno,0.0
+TR10,2026-04-09,Atenção,Etileno,0.0
+TR10,2020-06-24,Normal,Hidrogênio,6.0
+TR10,2021-01-22,Normal,Hidrogênio,11.0
+TR10,2021-09-14,Normal,Hidrogênio,9.0
+TR10,2022-03-11,Normal,Hidrogênio,15.0
+TR10,2022-08-30,Normal,Hidrogênio,31.0
+TR10,2023-03-03,Normal,Hidrogênio,21.0
+TR10,2023-08-18,Normal,Hidrogênio,24.0
+TR10,2024-03-29,Normal,Hidrogênio,20.0
+TR10,2024-10-29,Normal,Hidrogênio,26.0
+TR10,2025-08-25,Normal,Hidrogênio,17.0
+TR10,2026-04-09,Atenção,Hidrogênio,6.0
+TR10,2020-06-24,Normal,Metano,1.0
+TR10,2021-01-22,Normal,Metano,2.0
+TR10,2021-09-14,Normal,Metano,3.0
+TR10,2022-03-11,Normal,Metano,2.0
+TR10,2022-08-30,Normal,Metano,6.0
+TR10,2023-03-03,Normal,Metano,3.0
+TR10,2023-08-18,Normal,Metano,3.0
+TR10,2024-03-29,Normal,Metano,2.0
+TR10,2024-10-29,Normal,Metano,3.0
+TR10,2025-08-25,Normal,Metano,3.0
+TR10,2026-04-09,Atenção,Metano,12.0
+TR10,2020-06-24,Normal,Monóxido de Carbono,46.0
+TR10,2021-01-22,Normal,Monóxido de Carbono,81.0
+TR10,2021-09-14,Normal,Monóxido de Carbono,62.0
+TR10,2022-03-11,Normal,Monóxido de Carbono,77.0
+TR10,2022-08-30,Normal,Monóxido de Carbono,176.0
+TR10,2023-03-03,Normal,Monóxido de Carbono,76.0
+TR10,2023-08-18,Normal,Monóxido de Carbono,82.0
+TR10,2024-03-29,Normal,Monóxido de Carbono,150.0
+TR10,2024-10-29,Normal,Monóxido de Carbono,133.0
+TR10,2025-08-25,Normal,Monóxido de Carbono,93.0
+TR10,2026-04-09,Atenção,Monóxido de Carbono,1177.0
+TR11,2021-02-19,Normal,Acetileno,0.0
+TR11,2021-05-03,Normal,Acetileno,0.0
+TR11,2022-01-24,Normal,Acetileno,0.0
+TR11,2022-07-01,Normal,Acetileno,0.0
+TR11,2023-02-13,Normal,Acetileno,0.0
+TR11,2023-07-27,Normal,Acetileno,0.0
+TR11,2024-01-25,Normal,Acetileno,0.0
+TR11,2024-07-18,Normal,Acetileno,0.0
+TR11,2025-04-23,Normal,Acetileno,8.0
+TR11,2025-11-28,Normal,Acetileno,0.0
+TR11,2026-05-28,Normal,Acetileno,0.0
+TR11,2021-02-19,Normal,Dióxido de Carbono,9050.0
+TR11,2021-05-03,Normal,Dióxido de Carbono,4560.0
+TR11,2022-01-24,Normal,Dióxido de Carbono,3159.0
+TR11,2022-07-01,Normal,Dióxido de Carbono,7440.0
+TR11,2023-02-13,Normal,Dióxido de Carbono,3145.0
+TR11,2023-07-27,Normal,Dióxido de Carbono,5040.0
+TR11,2024-01-25,Normal,Dióxido de Carbono,9314.0
+TR11,2024-07-18,Normal,Dióxido de Carbono,7891.0
+TR11,2025-04-23,Normal,Dióxido de Carbono,4473.0
+TR11,2025-11-28,Normal,Dióxido de Carbono,10152.0
+TR11,2026-05-28,Normal,Dióxido de Carbono,8459.0
+TR11,2021-02-19,Normal,Etano,4.0
+TR11,2021-05-03,Normal,Etano,3.0
+TR11,2022-01-24,Normal,Etano,3.0
+TR11,2022-07-01,Normal,Etano,5.0
+TR11,2023-02-13,Normal,Etano,4.0
+TR11,2023-07-27,Normal,Etano,3.0
+TR11,2024-01-25,Normal,Etano,3.0
+TR11,2024-07-18,Normal,Etano,5.0
+TR11,2025-04-23,Normal,Etano,4.0
+TR11,2025-11-28,Normal,Etano,3.0
+TR11,2026-05-28,Normal,Etano,8.0
+TR11,2021-02-19,Normal,Etileno,0.0
+TR11,2021-05-03,Normal,Etileno,0.0
+TR11,2022-01-24,Normal,Etileno,0.0
+TR11,2022-07-01,Normal,Etileno,1.0
+TR11,2023-02-13,Normal,Etileno,0.0
+TR11,2023-07-27,Normal,Etileno,0.0
+TR11,2024-01-25,Normal,Etileno,0.0
+TR11,2024-07-18,Normal,Etileno,0.0
+TR11,2025-04-23,Normal,Etileno,11.0
+TR11,2025-11-28,Normal,Etileno,0.0
+TR11,2026-05-28,Normal,Etileno,1.0
+TR11,2021-02-19,Normal,Hidrogênio,7.0
+TR11,2021-05-03,Normal,Hidrogênio,1.0
+TR11,2022-01-24,Normal,Hidrogênio,2.0
+TR11,2022-07-01,Normal,Hidrogênio,3.0
+TR11,2023-02-13,Normal,Hidrogênio,2.0
+TR11,2023-07-27,Normal,Hidrogênio,6.0
+TR11,2024-01-25,Normal,Hidrogênio,8.0
+TR11,2024-07-18,Normal,Hidrogênio,14.0
+TR11,2025-04-23,Normal,Hidrogênio,2.0
+TR11,2025-11-28,Normal,Hidrogênio,8.0
+TR11,2026-05-28,Normal,Hidrogênio,5.0
+TR11,2021-02-19,Normal,Metano,35.0
+TR11,2021-05-03,Normal,Metano,38.0
+TR11,2022-01-24,Normal,Metano,38.0
+TR11,2022-07-01,Normal,Metano,55.0
+TR11,2023-02-13,Normal,Metano,24.0
+TR11,2023-07-27,Normal,Metano,54.0
+TR11,2024-01-25,Normal,Metano,53.0
+TR11,2024-07-18,Normal,Metano,57.0
+TR11,2025-04-23,Normal,Metano,29.0
+TR11,2025-11-28,Normal,Metano,54.0
+TR11,2026-05-28,Normal,Metano,48.0
+TR11,2021-02-19,Normal,Monóxido de Carbono,872.0
+TR11,2021-05-03,Normal,Monóxido de Carbono,501.0
+TR11,2022-01-24,Normal,Monóxido de Carbono,463.0
+TR11,2022-07-01,Normal,Monóxido de Carbono,652.0
+TR11,2023-02-13,Normal,Monóxido de Carbono,541.0
+TR11,2023-07-27,Normal,Monóxido de Carbono,740.0
+TR11,2024-01-25,Normal,Monóxido de Carbono,944.0
+TR11,2024-07-18,Normal,Monóxido de Carbono,784.0
+TR11,2025-04-23,Normal,Monóxido de Carbono,421.0
+TR11,2025-11-28,Normal,Monóxido de Carbono,897.0
+TR11,2026-05-28,Normal,Monóxido de Carbono,681.0
+TR12,2020-10-08,Atenção,Acetileno,6.0
+TR12,2021-09-01,Atenção,Acetileno,5.0
+TR12,2022-09-28,Normal,Acetileno,6.0
+TR12,2023-10-28,Normal,Acetileno,7.0
+TR12,2024-10-31,Normal,Acetileno,7.0
+TR12,2025-08-07,Normal,Acetileno,5.0
+TR12,2020-10-08,Atenção,Dióxido de Carbono,1900.0
+TR12,2021-09-01,Atenção,Dióxido de Carbono,41610.0
+TR12,2022-09-28,Normal,Dióxido de Carbono,3325.0
+TR12,2023-10-28,Normal,Dióxido de Carbono,2853.0
+TR12,2024-10-31,Normal,Dióxido de Carbono,4085.0
+TR12,2025-08-07,Normal,Dióxido de Carbono,3020.0
+TR12,2020-10-08,Atenção,Etano,32.0
+TR12,2021-09-01,Atenção,Etano,39.0
+TR12,2022-09-28,Normal,Etano,33.0
+TR12,2023-10-28,Normal,Etano,32.0
+TR12,2024-10-31,Normal,Etano,38.0
+TR12,2025-08-07,Normal,Etano,20.0
+TR12,2020-10-08,Atenção,Etileno,211.0
+TR12,2021-09-01,Atenção,Etileno,221.0
+TR12,2022-09-28,Normal,Etileno,223.0
+TR12,2023-10-28,Normal,Etileno,247.0
+TR12,2024-10-31,Normal,Etileno,275.0
+TR12,2025-08-07,Normal,Etileno,168.0
+TR12,2020-10-08,Atenção,Hidrogênio,380.0
+TR12,2021-09-01,Atenção,Hidrogênio,545.0
+TR12,2022-09-28,Normal,Hidrogênio,211.0
+TR12,2023-10-28,Normal,Hidrogênio,356.0
+TR12,2024-10-31,Normal,Hidrogênio,304.0
+TR12,2025-08-07,Normal,Hidrogênio,276.0
+TR12,2020-10-08,Atenção,Metano,101.0
+TR12,2021-09-01,Atenção,Metano,120.0
+TR12,2022-09-28,Normal,Metano,123.0
+TR12,2023-10-28,Normal,Metano,142.0
+TR12,2024-10-31,Normal,Metano,154.0
+TR12,2025-08-07,Normal,Metano,121.0
+TR12,2020-10-08,Atenção,Monóxido de Carbono,189.0
+TR12,2021-09-01,Atenção,Monóxido de Carbono,234.0
+TR12,2022-09-28,Normal,Monóxido de Carbono,189.0
+TR12,2023-10-28,Normal,Monóxido de Carbono,207.0
+TR12,2024-10-31,Normal,Monóxido de Carbono,249.0
+TR12,2025-08-07,Normal,Monóxido de Carbono,194.0
+TR13,2020-10-08,Normal,Acetileno,0.0
+TR13,2021-09-07,Normal,Acetileno,0.0
+TR13,2022-09-14,Normal,Acetileno,0.0
+TR13,2023-10-23,Normal,Acetileno,0.0
+TR13,2024-10-04,Normal,Acetileno,0.0
+TR13,2025-10-27,Normal,Acetileno,0.0
+TR13,2020-10-08,Normal,Dióxido de Carbono,4504.0
+TR13,2021-09-07,Normal,Dióxido de Carbono,4639.0
+TR13,2022-09-14,Normal,Dióxido de Carbono,4191.0
+TR13,2023-10-23,Normal,Dióxido de Carbono,5244.0
+TR13,2024-10-04,Normal,Dióxido de Carbono,8103.0
+TR13,2025-10-27,Normal,Dióxido de Carbono,8207.0
+TR13,2020-10-08,Normal,Etano,1117.0
+TR13,2021-09-07,Normal,Etano,1058.0
+TR13,2022-09-14,Normal,Etano,900.0
+TR13,2023-10-23,Normal,Etano,1283.0
+TR13,2024-10-04,Normal,Etano,937.0
+TR13,2025-10-27,Normal,Etano,1098.0
+TR13,2020-10-08,Normal,Etileno,4.0
+TR13,2021-09-07,Normal,Etileno,3.0
+TR13,2022-09-14,Normal,Etileno,3.0
+TR13,2023-10-23,Normal,Etileno,4.0
+TR13,2024-10-04,Normal,Etileno,0.0
+TR13,2025-10-27,Normal,Etileno,0.0
+TR13,2020-10-08,Normal,Hidrogênio,12.0
+TR13,2021-09-07,Normal,Hidrogênio,7.0
+TR13,2022-09-14,Normal,Hidrogênio,7.0
+TR13,2023-10-23,Normal,Hidrogênio,15.0
+TR13,2024-10-04,Normal,Hidrogênio,15.0
+TR13,2025-10-27,Normal,Hidrogênio,16.0
+TR13,2020-10-08,Normal,Metano,8.0
+TR13,2021-09-07,Normal,Metano,5.0
+TR13,2022-09-14,Normal,Metano,6.0
+TR13,2023-10-23,Normal,Metano,7.0
+TR13,2024-10-04,Normal,Metano,3.0
+TR13,2025-10-27,Normal,Metano,6.0
+TR13,2020-10-08,Normal,Monóxido de Carbono,74.0
+TR13,2021-09-07,Normal,Monóxido de Carbono,67.0
+TR13,2022-09-14,Normal,Monóxido de Carbono,64.0
+TR13,2023-10-23,Normal,Monóxido de Carbono,90.0
+TR13,2024-10-04,Normal,Monóxido de Carbono,145.0
+TR13,2025-10-27,Normal,Monóxido de Carbono,98.0
+TR14,2023-02-15,Normal,Acetileno,0.0
+TR14,2023-02-17,Normal,Acetileno,0.0
+TR14,2023-05-03,Normal,Acetileno,0.0
+TR14,2023-05-04,Normal,Acetileno,0.0
+TR14,2023-07-28,Normal,Acetileno,0.0
+TR14,2023-10-04,Normal,Acetileno,0.0
+TR14,2023-12-08,Normal,Acetileno,0.0
+TR14,2024-04-24,Normal,Acetileno,0.0
+TR14,2024-07-30,Normal,Acetileno,0.0
+TR14,2025-01-14,Normal,Acetileno,0.0
+TR14,2025-03-18,Normal,Acetileno,0.0
+TR14,2025-06-10,Normal,Acetileno,0.0
+TR14,2023-02-15,Normal,Dióxido de Carbono,9576.0
+TR14,2023-02-17,Normal,Dióxido de Carbono,23823.0
+TR14,2023-05-03,Normal,Dióxido de Carbono,7441.0
+TR14,2023-05-04,Normal,Dióxido de Carbono,9096.0
+TR14,2023-07-28,Normal,Dióxido de Carbono,7783.0
+TR14,2023-10-04,Normal,Dióxido de Carbono,15299.0
+TR14,2023-12-08,Normal,Dióxido de Carbono,15829.0
+TR14,2024-04-24,Normal,Dióxido de Carbono,18065.0
+TR14,2024-07-30,Normal,Dióxido de Carbono,9237.0
+TR14,2025-01-14,Normal,Dióxido de Carbono,11252.0
+TR14,2025-03-18,Normal,Dióxido de Carbono,14872.0
+TR14,2025-06-10,Normal,Dióxido de Carbono,22244.0
+TR14,2023-02-15,Normal,Etano,3.0
+TR14,2023-02-17,Normal,Etano,0.0
+TR14,2023-05-03,Normal,Etano,2.0
+TR14,2023-05-04,Normal,Etano,3.0
+TR14,2023-07-28,Normal,Etano,0.0
+TR14,2023-10-04,Normal,Etano,0.0
+TR14,2023-12-08,Normal,Etano,0.0
+TR14,2024-04-24,Normal,Etano,5.0
+TR14,2024-07-30,Normal,Etano,3.0
+TR14,2025-01-14,Normal,Etano,2.0
+TR14,2025-03-18,Normal,Etano,5.0
+TR14,2025-06-10,Normal,Etano,6.0
+TR14,2023-02-15,Normal,Etileno,0.0
+TR14,2023-02-17,Normal,Etileno,0.0
+TR14,2023-05-03,Normal,Etileno,0.0
+TR14,2023-05-04,Normal,Etileno,0.0
+TR14,2023-07-28,Normal,Etileno,0.0
+TR14,2023-10-04,Normal,Etileno,0.0
+TR14,2023-12-08,Normal,Etileno,0.0
+TR14,2024-04-24,Normal,Etileno,0.0
+TR14,2024-07-30,Normal,Etileno,0.0
+TR14,2025-01-14,Normal,Etileno,0.0
+TR14,2025-03-18,Normal,Etileno,0.0
+TR14,2025-06-10,Normal,Etileno,0.0
+TR14,2023-02-15,Normal,Hidrogênio,580.0
+TR14,2023-02-17,Normal,Hidrogênio,539.0
+TR14,2023-05-03,Normal,Hidrogênio,455.0
+TR14,2023-05-04,Normal,Hidrogênio,444.0
+TR14,2023-07-28,Normal,Hidrogênio,519.0
+TR14,2023-10-04,Normal,Hidrogênio,445.0
+TR14,2023-12-08,Normal,Hidrogênio,603.0
+TR14,2024-04-24,Normal,Hidrogênio,597.0
+TR14,2024-07-30,Normal,Hidrogênio,325.0
+TR14,2025-01-14,Normal,Hidrogênio,405.0
+TR14,2025-03-18,Normal,Hidrogênio,713.0
+TR14,2025-06-10,Normal,Hidrogênio,680.0
+TR14,2023-02-15,Normal,Metano,17.0
+TR14,2023-02-17,Normal,Metano,24.0
+TR14,2023-05-03,Normal,Metano,49.0
+TR14,2023-05-04,Normal,Metano,56.0
+TR14,2023-07-28,Normal,Metano,18.0
+TR14,2023-10-04,Normal,Metano,28.0
+TR14,2023-12-08,Normal,Metano,38.0
+TR14,2024-04-24,Normal,Metano,34.0
+TR14,2024-07-30,Normal,Metano,12.0
+TR14,2025-01-14,Normal,Metano,18.0
+TR14,2025-03-18,Normal,Metano,43.0
+TR14,2025-06-10,Normal,Metano,44.0
+TR14,2023-02-15,Normal,Monóxido de Carbono,497.0
+TR14,2023-02-17,Normal,Monóxido de Carbono,558.0
+TR14,2023-05-03,Normal,Monóxido de Carbono,444.0
+TR14,2023-05-04,Normal,Monóxido de Carbono,481.0
+TR14,2023-07-28,Normal,Monóxido de Carbono,487.0
+TR14,2023-10-04,Normal,Monóxido de Carbono,644.0
+TR14,2023-12-08,Normal,Monóxido de Carbono,942.0
+TR14,2024-04-24,Normal,Monóxido de Carbono,789.0
+TR14,2024-07-30,Normal,Monóxido de Carbono,165.0
+TR14,2025-01-14,Normal,Monóxido de Carbono,402.0
+TR14,2025-03-18,Normal,Monóxido de Carbono,507.0
+TR14,2025-06-10,Normal,Monóxido de Carbono,612.0
+TR15,2023-11-28,Normal,Acetileno,1.0
+TR15,2023-11-29,Normal,Acetileno,1.0
+TR15,2024-02-20,Normal,Acetileno,1.0
+TR15,2024-02-21,Normal,Acetileno,1.0
+TR15,2024-06-04,Normal,Acetileno,0.0
+TR15,2024-06-04,Normal,Acetileno,1.0
+TR15,2024-08-20,Normal,Acetileno,0.0
+TR15,2024-08-27,Normal,Acetileno,0.0
+TR15,2024-11-04,Normal,Acetileno,0.0
+TR15,2024-11-05,Normal,Acetileno,1.0
+TR15,2025-02-04,Normal,Acetileno,0.0
+TR15,2025-02-05,Normal,Acetileno,1.0
+TR15,2023-11-28,Normal,Dióxido de Carbono,10648.0
+TR15,2023-11-29,Normal,Dióxido de Carbono,14759.0
+TR15,2024-02-20,Normal,Dióxido de Carbono,11577.0
+TR15,2024-02-21,Normal,Dióxido de Carbono,18234.0
+TR15,2024-06-04,Normal,Dióxido de Carbono,11905.0
+TR15,2024-06-04,Normal,Dióxido de Carbono,12323.0
+TR15,2024-08-20,Normal,Dióxido de Carbono,12207.0
+TR15,2024-08-27,Normal,Dióxido de Carbono,18137.0
+TR15,2024-11-04,Normal,Dióxido de Carbono,17788.0
+TR15,2024-11-05,Normal,Dióxido de Carbono,18728.0
+TR15,2025-02-04,Normal,Dióxido de Carbono,17809.0
+TR15,2025-02-05,Normal,Dióxido de Carbono,18004.0
+TR15,2023-11-28,Normal,Etano,121.0
+TR15,2023-11-29,Normal,Etano,122.0
+TR15,2024-02-20,Normal,Etano,166.0
+TR15,2024-02-21,Normal,Etano,181.0
+TR15,2024-06-04,Normal,Etano,132.0
+TR15,2024-06-04,Normal,Etano,141.0
+TR15,2024-08-20,Normal,Etano,182.0
+TR15,2024-08-27,Normal,Etano,133.0
+TR15,2024-11-04,Normal,Etano,140.0
+TR15,2024-11-05,Normal,Etano,155.0
+TR15,2025-02-04,Normal,Etano,132.0
+TR15,2025-02-05,Normal,Etano,149.0
+TR15,2023-11-28,Normal,Etileno,415.0
+TR15,2023-11-29,Normal,Etileno,487.0
+TR15,2024-02-20,Normal,Etileno,591.0
+TR15,2024-02-21,Normal,Etileno,576.0
+TR15,2024-06-04,Normal,Etileno,467.0
+TR15,2024-06-04,Normal,Etileno,480.0
+TR15,2024-08-20,Normal,Etileno,439.0
+TR15,2024-08-27,Normal,Etileno,399.0
+TR15,2024-11-04,Normal,Etileno,416.0
+TR15,2024-11-05,Normal,Etileno,582.0
+TR15,2025-02-04,Normal,Etileno,395.0
+TR15,2025-02-05,Normal,Etileno,431.0
+TR15,2023-11-28,Normal,Hidrogênio,891.0
+TR15,2023-11-29,Normal,Hidrogênio,978.0
+TR15,2024-02-20,Normal,Hidrogênio,954.0
+TR15,2024-02-21,Normal,Hidrogênio,1084.0
+TR15,2024-06-04,Normal,Hidrogênio,884.0
+TR15,2024-06-04,Normal,Hidrogênio,891.0
+TR15,2024-08-20,Normal,Hidrogênio,822.0
+TR15,2024-08-27,Normal,Hidrogênio,837.0
+TR15,2024-11-04,Normal,Hidrogênio,932.0
+TR15,2024-11-05,Normal,Hidrogênio,949.0
+TR15,2025-02-04,Normal,Hidrogênio,1009.0
+TR15,2025-02-05,Normal,Hidrogênio,983.0
+TR15,2023-11-28,Normal,Metano,438.0
+TR15,2023-11-29,Normal,Metano,495.0
+TR15,2024-02-20,Normal,Metano,697.0
+TR15,2024-02-21,Normal,Metano,680.0
+TR15,2024-06-04,Normal,Metano,477.0
+TR15,2024-06-04,Normal,Metano,489.0
+TR15,2024-08-20,Normal,Metano,488.0
+TR15,2024-08-27,Normal,Metano,495.0
+TR15,2024-11-04,Normal,Metano,403.0
+TR15,2024-11-05,Normal,Metano,597.0
+TR15,2025-02-04,Normal,Metano,538.0
+TR15,2025-02-05,Normal,Metano,562.0
+TR15,2023-11-28,Normal,Monóxido de Carbono,695.0
+TR15,2023-11-29,Normal,Monóxido de Carbono,817.0
+TR15,2024-02-20,Normal,Monóxido de Carbono,892.0
+TR15,2024-02-21,Normal,Monóxido de Carbono,1186.0
+TR15,2024-06-04,Normal,Monóxido de Carbono,786.0
+TR15,2024-06-04,Normal,Monóxido de Carbono,831.0
+TR15,2024-08-20,Normal,Monóxido de Carbono,807.0
+TR15,2024-08-27,Normal,Monóxido de Carbono,1003.0
+TR15,2024-11-04,Normal,Monóxido de Carbono,1159.0
+TR15,2024-11-05,Normal,Monóxido de Carbono,1018.0
+TR15,2025-02-04,Normal,Monóxido de Carbono,759.0
+TR15,2025-02-05,Normal,Monóxido de Carbono,807.0
+TR16,2021-02-10,Normal,Acetileno,0.0
+TR16,2021-08-09,Normal,Acetileno,0.0
+TR16,2022-02-14,Normal,Acetileno,0.0
+TR16,2022-07-23,Normal,Acetileno,0.0
+TR16,2023-02-06,Normal,Acetileno,0.0
+TR16,2023-10-23,Normal,Acetileno,0.0
+TR16,2024-03-20,Normal,Acetileno,0.0
+TR16,2024-09-30,Normal,Acetileno,0.0
+TR16,2025-03-28,Normal,Acetileno,0.0
+TR16,2025-09-10,Normal,Acetileno,0.0
+TR16,2026-03-16,Normal,Acetileno,0.2
+TR16,2021-02-10,Normal,Dióxido de Carbono,1200.0
+TR16,2021-08-09,Normal,Dióxido de Carbono,1552.0
+TR16,2022-02-14,Normal,Dióxido de Carbono,487.0
+TR16,2022-07-23,Normal,Dióxido de Carbono,689.0
+TR16,2023-02-06,Normal,Dióxido de Carbono,520.0
+TR16,2023-10-23,Normal,Dióxido de Carbono,1230.0
+TR16,2024-03-20,Normal,Dióxido de Carbono,1238.6
+TR16,2024-09-30,Normal,Dióxido de Carbono,1747.7
+TR16,2025-03-28,Normal,Dióxido de Carbono,1892.1
+TR16,2025-09-10,Normal,Dióxido de Carbono,1934.6
+TR16,2026-03-16,Normal,Dióxido de Carbono,2200.7
+TR16,2021-02-10,Normal,Etano,0.0
+TR16,2021-08-09,Normal,Etano,0.0
+TR16,2022-02-14,Normal,Etano,0.0
+TR16,2022-07-23,Normal,Etano,0.0
+TR16,2023-02-06,Normal,Etano,0.0
+TR16,2023-10-23,Normal,Etano,0.0
+TR16,2024-03-20,Normal,Etano,0.3
+TR16,2024-09-30,Normal,Etano,0.5
+TR16,2025-03-28,Normal,Etano,0.7
+TR16,2025-09-10,Normal,Etano,0.2
+TR16,2026-03-16,Normal,Etano,0.5
+TR16,2021-02-10,Normal,Etileno,0.0
+TR16,2021-08-09,Normal,Etileno,0.0
+TR16,2022-02-14,Normal,Etileno,0.0
+TR16,2022-07-23,Normal,Etileno,0.0
+TR16,2023-02-06,Normal,Etileno,0.0
+TR16,2023-10-23,Normal,Etileno,2.0
+TR16,2024-03-20,Normal,Etileno,0.0
+TR16,2024-09-30,Normal,Etileno,0.0
+TR16,2025-03-28,Normal,Etileno,0.0
+TR16,2025-09-10,Normal,Etileno,0.3
+TR16,2026-03-16,Normal,Etileno,0.4
+TR16,2021-02-10,Normal,Hidrogênio,19.0
+TR16,2021-08-09,Normal,Hidrogênio,4.0
+TR16,2022-02-14,Normal,Hidrogênio,28.0
+TR16,2022-07-23,Normal,Hidrogênio,43.0
+TR16,2023-02-06,Normal,Hidrogênio,19.0
+TR16,2023-10-23,Normal,Hidrogênio,31.0
+TR16,2024-03-20,Normal,Hidrogênio,11.9
+TR16,2024-09-30,Normal,Hidrogênio,9.5
+TR16,2025-03-28,Normal,Hidrogênio,5.1
+TR16,2025-09-10,Normal,Hidrogênio,7.2
+TR16,2026-03-16,Normal,Hidrogênio,6.3
+TR16,2021-02-10,Normal,Metano,3.0
+TR16,2021-08-09,Normal,Metano,5.0
+TR16,2022-02-14,Normal,Metano,10.0
+TR16,2022-07-23,Normal,Metano,13.0
+TR16,2023-02-06,Normal,Metano,7.0
+TR16,2023-10-23,Normal,Metano,10.0
+TR16,2024-03-20,Normal,Metano,4.78
+TR16,2024-09-30,Normal,Metano,17.8
+TR16,2025-03-28,Normal,Metano,18.1
+TR16,2025-09-10,Normal,Metano,18.5
+TR16,2026-03-16,Normal,Metano,21.3
+TR16,2021-02-10,Normal,Monóxido de Carbono,408.0
+TR16,2021-08-09,Normal,Monóxido de Carbono,521.0
+TR16,2022-02-14,Normal,Monóxido de Carbono,144.0
+TR16,2022-07-23,Normal,Monóxido de Carbono,232.0
+TR16,2023-02-06,Normal,Monóxido de Carbono,176.0
+TR16,2023-10-23,Normal,Monóxido de Carbono,384.0
+TR16,2024-03-20,Normal,Monóxido de Carbono,510.8
+TR16,2024-09-30,Normal,Monóxido de Carbono,368.7
+TR16,2025-03-28,Normal,Monóxido de Carbono,705.4
+TR16,2025-09-10,Normal,Monóxido de Carbono,708.9
+TR16,2026-03-16,Normal,Monóxido de Carbono,968.6
+TR17,2020-12-28,Normal,Acetileno,0.0
+TR17,2021-02-10,Normal,Acetileno,0.0
+TR17,2022-03-14,Normal,Acetileno,0.0
+TR17,2022-07-23,Normal,Acetileno,0.0
+TR17,2023-02-06,Normal,Acetileno,0.0
+TR17,2023-10-23,Normal,Acetileno,0.0
+TR17,2024-03-20,Normal,Acetileno,0.0
+TR17,2024-09-27,Normal,Acetileno,0.0
+TR17,2025-03-28,Normal,Acetileno,0.0
+TR17,2025-09-10,Normal,Acetileno,0.0
+TR17,2026-03-17,Normal,Acetileno,0.0
+TR17,2020-12-28,Normal,Dióxido de Carbono,1380.0
+TR17,2021-02-10,Normal,Dióxido de Carbono,1700.0
+TR17,2022-03-14,Normal,Dióxido de Carbono,2078.0
+TR17,2022-07-23,Normal,Dióxido de Carbono,2088.0
+TR17,2023-02-06,Normal,Dióxido de Carbono,1217.0
+TR17,2023-10-23,Normal,Dióxido de Carbono,4477.0
+TR17,2024-03-20,Normal,Dióxido de Carbono,2288.8
+TR17,2024-09-27,Normal,Dióxido de Carbono,3119.8
+TR17,2025-03-28,Normal,Dióxido de Carbono,2875.8
+TR17,2025-09-10,Normal,Dióxido de Carbono,4110.8
+TR17,2026-03-17,Normal,Dióxido de Carbono,4083.7
+TR17,2020-12-28,Normal,Etano,1.0
+TR17,2021-02-10,Normal,Etano,1.0
+TR17,2022-03-14,Normal,Etano,1.0
+TR17,2022-07-23,Normal,Etano,0.0
+TR17,2023-02-06,Normal,Etano,2.0
+TR17,2023-10-23,Normal,Etano,1.0
+TR17,2024-03-20,Normal,Etano,0.0
+TR17,2024-09-27,Normal,Etano,0.0
+TR17,2025-03-28,Normal,Etano,0.0
+TR17,2025-09-10,Normal,Etano,0.7
+TR17,2026-03-17,Normal,Etano,0.5
+TR17,2020-12-28,Normal,Etileno,1.0
+TR17,2021-02-10,Normal,Etileno,1.0
+TR17,2022-03-14,Normal,Etileno,1.0
+TR17,2022-07-23,Normal,Etileno,1.0
+TR17,2023-02-06,Normal,Etileno,0.0
+TR17,2023-10-23,Normal,Etileno,0.0
+TR17,2024-03-20,Normal,Etileno,0.0
+TR17,2024-09-27,Normal,Etileno,0.0
+TR17,2025-03-28,Normal,Etileno,0.0
+TR17,2025-09-10,Normal,Etileno,0.0
+TR17,2026-03-17,Normal,Etileno,0.0
+TR17,2020-12-28,Normal,Hidrogênio,29.0
+TR17,2021-02-10,Normal,Hidrogênio,5.0
+TR17,2022-03-14,Normal,Hidrogênio,10.0
+TR17,2022-07-23,Normal,Hidrogênio,3.0
+TR17,2023-02-06,Normal,Hidrogênio,102.0
+TR17,2023-10-23,Normal,Hidrogênio,4.0
+TR17,2024-03-20,Normal,Hidrogênio,2.0
+TR17,2024-09-27,Normal,Hidrogênio,1.5
+TR17,2025-03-28,Normal,Hidrogênio,5.3
+TR17,2025-09-10,Normal,Hidrogênio,4.4
+TR17,2026-03-17,Normal,Hidrogênio,2.4
+TR17,2020-12-28,Normal,Metano,0.0
+TR17,2021-02-10,Normal,Metano,3.0
+TR17,2022-03-14,Normal,Metano,7.0
+TR17,2022-07-23,Normal,Metano,7.0
+TR17,2023-02-06,Normal,Metano,9.0
+TR17,2023-10-23,Normal,Metano,10.0
+TR17,2024-03-20,Normal,Metano,3.8
+TR17,2024-09-27,Normal,Metano,35.0
+TR17,2025-03-28,Normal,Metano,18.7
+TR17,2025-09-10,Normal,Metano,10.9
+TR17,2026-03-17,Normal,Metano,4.7
+TR17,2020-12-28,Normal,Monóxido de Carbono,361.0
+TR17,2021-02-10,Normal,Monóxido de Carbono,281.0
+TR17,2022-03-14,Normal,Monóxido de Carbono,714.0
+TR17,2022-07-23,Normal,Monóxido de Carbono,606.0
+TR17,2023-02-06,Normal,Monóxido de Carbono,191.0
+TR17,2023-10-23,Normal,Monóxido de Carbono,1098.0
+TR17,2024-03-20,Normal,Monóxido de Carbono,789.9
+TR17,2024-09-27,Normal,Monóxido de Carbono,1143.9
+TR17,2025-03-28,Normal,Monóxido de Carbono,983.5
+TR17,2025-09-10,Normal,Monóxido de Carbono,1213.2
+TR17,2026-03-17,Normal,Monóxido de Carbono,774.5
+TR18,2023-11-29,Normal,Acetileno,0.0
+TR18,2024-05-23,Normal,Acetileno,0.0
+TR18,2024-11-25,Normal,Acetileno,0.0
+TR18,2025-06-17,Normal,Acetileno,0.0
+TR18,2025-10-22,Normal,Acetileno,0.0
+TR18,2026-04-23,Normal,Acetileno,0.0
+TR18,2023-11-29,Normal,Dióxido de Carbono,3814.0
+TR18,2024-05-23,Normal,Dióxido de Carbono,3889.0
+TR18,2024-11-25,Normal,Dióxido de Carbono,5174.0
+TR18,2025-06-17,Normal,Dióxido de Carbono,1722.0
+TR18,2025-10-22,Normal,Dióxido de Carbono,2937.0
+TR18,2026-04-23,Normal,Dióxido de Carbono,2534.0
+TR18,2023-11-29,Normal,Etano,0.0
+TR18,2024-05-23,Normal,Etano,0.0
+TR18,2024-11-25,Normal,Etano,0.0
+TR18,2025-06-17,Normal,Etano,0.0
+TR18,2025-10-22,Normal,Etano,0.0
+TR18,2026-04-23,Normal,Etano,0.0
+TR18,2023-11-29,Normal,Etileno,0.0
+TR18,2024-05-23,Normal,Etileno,0.0
+TR18,2024-11-25,Normal,Etileno,0.0
+TR18,2025-06-17,Normal,Etileno,0.0
+TR18,2025-10-22,Normal,Etileno,0.0
+TR18,2026-04-23,Normal,Etileno,0.0
+TR18,2023-11-29,Normal,Hidrogênio,3.0
+TR18,2024-05-23,Normal,Hidrogênio,8.0
+TR18,2024-11-25,Normal,Hidrogênio,2.0
+TR18,2025-06-17,Normal,Hidrogênio,6.0
+TR18,2025-10-22,Normal,Hidrogênio,10.0
+TR18,2026-04-23,Normal,Hidrogênio,2.0
+TR18,2023-11-29,Normal,Metano,13.0
+TR18,2024-05-23,Normal,Metano,16.0
+TR18,2024-11-25,Normal,Metano,9.0
+TR18,2025-06-17,Normal,Metano,3.0
+TR18,2025-10-22,Normal,Metano,10.0
+TR18,2026-04-23,Normal,Metano,9.0
+TR18,2023-11-29,Normal,Monóxido de Carbono,1114.0
+TR18,2024-05-23,Normal,Monóxido de Carbono,1352.0
+TR18,2024-11-25,Normal,Monóxido de Carbono,1404.0
+TR18,2025-06-17,Normal,Monóxido de Carbono,784.0
+TR18,2025-10-22,Normal,Monóxido de Carbono,728.0
+TR18,2026-04-23,Normal,Monóxido de Carbono,1027.0
+TR19,2023-10-28,Normal,Acetileno,0.0
+TR19,2024-04-18,Normal,Acetileno,0.0
+TR19,2024-10-22,Normal,Acetileno,0.0
+TR19,2025-04-18,Normal,Acetileno,0.0
+TR19,2025-11-28,Normal,Acetileno,0.0
+TR19,2026-04-28,Normal,Acetileno,0.0
+TR19,2023-10-28,Normal,Dióxido de Carbono,3312.0
+TR19,2024-04-18,Normal,Dióxido de Carbono,4941.0
+TR19,2024-10-22,Normal,Dióxido de Carbono,3830.0
+TR19,2025-04-18,Normal,Dióxido de Carbono,2309.0
+TR19,2025-11-28,Normal,Dióxido de Carbono,5080.0
+TR19,2026-04-28,Normal,Dióxido de Carbono,2782.0
+TR19,2023-10-28,Normal,Etano,0.0
+TR19,2024-04-18,Normal,Etano,0.0
+TR19,2024-10-22,Normal,Etano,0.0
+TR19,2025-04-18,Normal,Etano,0.0
+TR19,2025-11-28,Normal,Etano,0.0
+TR19,2026-04-28,Normal,Etano,0.0
+TR19,2023-10-28,Normal,Etileno,0.0
+TR19,2024-04-18,Normal,Etileno,0.0
+TR19,2024-10-22,Normal,Etileno,0.0
+TR19,2025-04-18,Normal,Etileno,0.0
+TR19,2025-11-28,Normal,Etileno,0.0
+TR19,2026-04-28,Normal,Etileno,0.0
+TR19,2023-10-28,Normal,Hidrogênio,9.0
+TR19,2024-04-18,Normal,Hidrogênio,41.0
+TR19,2024-10-22,Normal,Hidrogênio,28.0
+TR19,2025-04-18,Normal,Hidrogênio,22.0
+TR19,2025-11-28,Normal,Hidrogênio,3.0
+TR19,2026-04-28,Normal,Hidrogênio,9.0
+TR19,2023-10-28,Normal,Metano,10.0
+TR19,2024-04-18,Normal,Metano,8.0
+TR19,2024-10-22,Normal,Metano,9.0
+TR19,2025-04-18,Normal,Metano,13.0
+TR19,2025-11-28,Normal,Metano,22.0
+TR19,2026-04-28,Normal,Metano,12.0
+TR19,2023-10-28,Normal,Monóxido de Carbono,623.0
+TR19,2024-04-18,Normal,Monóxido de Carbono,820.0
+TR19,2024-10-22,Normal,Monóxido de Carbono,751.0
+TR19,2025-04-18,Normal,Monóxido de Carbono,559.0
+TR19,2025-11-28,Normal,Monóxido de Carbono,790.0
+TR19,2026-04-28,Normal,Monóxido de Carbono,605.0
+TR20,2023-10-26,Normal,Acetileno,0.0
+TR20,2024-04-16,Normal,Acetileno,0.0
+TR20,2024-10-22,Normal,Acetileno,0.0
+TR20,2025-04-16,Normal,Acetileno,0.0
+TR20,2025-11-28,Normal,Acetileno,0.0
+TR20,2026-04-28,Normal,Acetileno,0.0
+TR20,2023-10-26,Normal,Dióxido de Carbono,1872.0
+TR20,2024-04-16,Normal,Dióxido de Carbono,1912.0
+TR20,2024-10-22,Normal,Dióxido de Carbono,1895.0
+TR20,2025-04-16,Normal,Dióxido de Carbono,1183.0
+TR20,2025-11-28,Normal,Dióxido de Carbono,2948.0
+TR20,2026-04-28,Normal,Dióxido de Carbono,1296.0
+TR20,2023-10-26,Normal,Etano,0.0
+TR20,2024-04-16,Normal,Etano,0.0
+TR20,2024-10-22,Normal,Etano,0.0
+TR20,2025-04-16,Normal,Etano,0.0
+TR20,2025-11-28,Normal,Etano,0.0
+TR20,2026-04-28,Normal,Etano,0.0
+TR20,2023-10-26,Normal,Etileno,0.0
+TR20,2024-04-16,Normal,Etileno,0.0
+TR20,2024-10-22,Normal,Etileno,0.0
+TR20,2025-04-16,Normal,Etileno,0.0
+TR20,2025-11-28,Normal,Etileno,0.0
+TR20,2026-04-28,Normal,Etileno,0.0
+TR20,2023-10-26,Normal,Hidrogênio,9.0
+TR20,2024-04-16,Normal,Hidrogênio,8.0
+TR20,2024-10-22,Normal,Hidrogênio,87.0
+TR20,2025-04-16,Normal,Hidrogênio,7.0
+TR20,2025-11-28,Normal,Hidrogênio,1.0
+TR20,2026-04-28,Normal,Hidrogênio,2.0
+TR20,2023-10-26,Normal,Metano,5.0
+TR20,2024-04-16,Normal,Metano,3.0
+TR20,2024-10-22,Normal,Metano,5.0
+TR20,2025-04-16,Normal,Metano,8.0
+TR20,2025-11-28,Normal,Metano,7.0
+TR20,2026-04-28,Normal,Metano,3.0
+TR20,2023-10-26,Normal,Monóxido de Carbono,631.0
+TR20,2024-04-16,Normal,Monóxido de Carbono,699.0
+TR20,2024-10-22,Normal,Monóxido de Carbono,596.0
+TR20,2025-04-16,Normal,Monóxido de Carbono,599.0
+TR20,2025-11-28,Normal,Monóxido de Carbono,777.0
+TR20,2026-04-28,Normal,Monóxido de Carbono,467.0
+TR21,2023-06-10,Normal,Acetileno,0.0
+TR21,2023-12-20,Normal,Acetileno,0.0
+TR21,2024-06-21,Normal,Acetileno,0.0
+TR21,2024-12-19,Normal,Acetileno,0.0
+TR21,2025-06-18,Normal,Acetileno,0.0
+TR21,2025-12-12,Atenção,Acetileno,0.0
+TR21,2026-02-24,Atenção,Acetileno,0.0
+TR21,2026-03-12,Atenção,Acetileno,0.0
+TR21,2026-04-09,Atenção,Acetileno,0.0
+TR21,2023-06-10,Normal,Dióxido de Carbono,3156.0
+TR21,2023-12-20,Normal,Dióxido de Carbono,5060.0
+TR21,2024-06-21,Normal,Dióxido de Carbono,5784.0
+TR21,2024-12-19,Normal,Dióxido de Carbono,6718.0
+TR21,2025-06-18,Normal,Dióxido de Carbono,7888.0
+TR21,2025-12-12,Atenção,Dióxido de Carbono,11742.0
+TR21,2026-02-24,Atenção,Dióxido de Carbono,15797.0
+TR21,2026-03-12,Atenção,Dióxido de Carbono,5307.0
+TR21,2026-04-09,Atenção,Dióxido de Carbono,5868.0
+TR21,2023-06-10,Normal,Etano,0.0
+TR21,2023-12-20,Normal,Etano,0.0
+TR21,2024-06-21,Normal,Etano,0.0
+TR21,2024-12-19,Normal,Etano,0.0
+TR21,2025-06-18,Normal,Etano,0.0
+TR21,2025-12-12,Atenção,Etano,0.0
+TR21,2026-02-24,Atenção,Etano,0.0
+TR21,2026-03-12,Atenção,Etano,0.0
+TR21,2026-04-09,Atenção,Etano,0.0
+TR21,2023-06-10,Normal,Etileno,0.0
+TR21,2023-12-20,Normal,Etileno,0.0
+TR21,2024-06-21,Normal,Etileno,0.0
+TR21,2024-12-19,Normal,Etileno,0.0
+TR21,2025-06-18,Normal,Etileno,0.0
+TR21,2025-12-12,Atenção,Etileno,0.0
+TR21,2026-02-24,Atenção,Etileno,0.0
+TR21,2026-03-12,Atenção,Etileno,0.0
+TR21,2026-04-09,Atenção,Etileno,0.0
+TR21,2023-06-10,Normal,Hidrogênio,79.0
+TR21,2023-12-20,Normal,Hidrogênio,55.0
+TR21,2024-06-21,Normal,Hidrogênio,63.0
+TR21,2024-12-19,Normal,Hidrogênio,70.0
+TR21,2025-06-18,Normal,Hidrogênio,92.0
+TR21,2025-12-12,Atenção,Hidrogênio,85.0
+TR21,2026-02-24,Atenção,Hidrogênio,111.0
+TR21,2026-03-12,Atenção,Hidrogênio,87.0
+TR21,2026-04-09,Atenção,Hidrogênio,24.0
+TR21,2023-06-10,Normal,Metano,17.0
+TR21,2023-12-20,Normal,Metano,7.0
+TR21,2024-06-21,Normal,Metano,6.0
+TR21,2024-12-19,Normal,Metano,5.0
+TR21,2025-06-18,Normal,Metano,1.0
+TR21,2025-12-12,Atenção,Metano,52.0
+TR21,2026-02-24,Atenção,Metano,69.0
+TR21,2026-03-12,Atenção,Metano,18.0
+TR21,2026-04-09,Atenção,Metano,21.0
+TR21,2023-06-10,Normal,Monóxido de Carbono,294.0
+TR21,2023-12-20,Normal,Monóxido de Carbono,323.0
+TR21,2024-06-21,Normal,Monóxido de Carbono,348.0
+TR21,2024-12-19,Normal,Monóxido de Carbono,524.0
+TR21,2025-06-18,Normal,Monóxido de Carbono,694.0
+TR21,2025-12-12,Atenção,Monóxido de Carbono,1056.0
+TR21,2026-02-24,Atenção,Monóxido de Carbono,1223.0
+TR21,2026-03-12,Atenção,Monóxido de Carbono,513.0
+TR21,2026-04-09,Atenção,Monóxido de Carbono,392.0
+TR22,2021-02-22,Normal,Acetileno,0.0
+TR22,2021-08-04,Normal,Acetileno,0.0
+TR22,2022-01-25,Normal,Acetileno,0.0
+TR22,2022-07-07,Normal,Acetileno,0.0
+TR22,2023-02-15,Normal,Acetileno,0.0
+TR22,2023-07-28,Normal,Acetileno,0.0
+TR22,2024-01-28,Normal,Acetileno,0.0
+TR22,2024-05-13,Normal,Acetileno,0.0
+TR22,2025-03-19,Normal,Acetileno,0.0
+TR22,2025-11-27,Normal,Acetileno,0.0
+TR22,2026-05-27,Normal,Acetileno,0.0
+TR22,2021-02-22,Normal,Dióxido de Carbono,644.0
+TR22,2021-08-04,Normal,Dióxido de Carbono,145.0
+TR22,2022-01-25,Normal,Dióxido de Carbono,422.0
+TR22,2022-07-07,Normal,Dióxido de Carbono,350.0
+TR22,2023-02-15,Normal,Dióxido de Carbono,873.0
+TR22,2023-07-28,Normal,Dióxido de Carbono,237.0
+TR22,2024-01-28,Normal,Dióxido de Carbono,1024.0
+TR22,2024-05-13,Normal,Dióxido de Carbono,1255.0
+TR22,2025-03-19,Normal,Dióxido de Carbono,1550.0
+TR22,2025-11-27,Normal,Dióxido de Carbono,1053.0
+TR22,2026-05-27,Normal,Dióxido de Carbono,873.0
+TR22,2021-02-22,Normal,Etano,0.0
+TR22,2021-08-04,Normal,Etano,0.0
+TR22,2022-01-25,Normal,Etano,0.0
+TR22,2022-07-07,Normal,Etano,0.0
+TR22,2023-02-15,Normal,Etano,0.0
+TR22,2023-07-28,Normal,Etano,0.0
+TR22,2024-01-28,Normal,Etano,0.0
+TR22,2024-05-13,Normal,Etano,0.0
+TR22,2025-03-19,Normal,Etano,0.0
+TR22,2025-11-27,Normal,Etano,0.0
+TR22,2026-05-27,Normal,Etano,0.0
+TR22,2021-02-22,Normal,Etileno,0.0
+TR22,2021-08-04,Normal,Etileno,0.0
+TR22,2022-01-25,Normal,Etileno,0.0
+TR22,2022-07-07,Normal,Etileno,0.0
+TR22,2023-02-15,Normal,Etileno,0.0
+TR22,2023-07-28,Normal,Etileno,0.0
+TR22,2024-01-28,Normal,Etileno,0.0
+TR22,2024-05-13,Normal,Etileno,0.0
+TR22,2025-03-19,Normal,Etileno,0.0
+TR22,2025-11-27,Normal,Etileno,0.0
+TR22,2026-05-27,Normal,Etileno,0.0
+TR22,2021-02-22,Normal,Hidrogênio,6.0
+TR22,2021-08-04,Normal,Hidrogênio,11.0
+TR22,2022-01-25,Normal,Hidrogênio,16.0
+TR22,2022-07-07,Normal,Hidrogênio,18.0
+TR22,2023-02-15,Normal,Hidrogênio,87.0
+TR22,2023-07-28,Normal,Hidrogênio,12.0
+TR22,2024-01-28,Normal,Hidrogênio,38.0
+TR22,2024-05-13,Normal,Hidrogênio,16.0
+TR22,2025-03-19,Normal,Hidrogênio,52.0
+TR22,2025-11-27,Normal,Hidrogênio,10.0
+TR22,2026-05-27,Normal,Hidrogênio,6.0
+TR22,2021-02-22,Normal,Metano,4.0
+TR22,2021-08-04,Normal,Metano,1.0
+TR22,2022-01-25,Normal,Metano,1.0
+TR22,2022-07-07,Normal,Metano,2.0
+TR22,2023-02-15,Normal,Metano,3.0
+TR22,2023-07-28,Normal,Metano,2.0
+TR22,2024-01-28,Normal,Metano,4.0
+TR22,2024-05-13,Normal,Metano,5.0
+TR22,2025-03-19,Normal,Metano,6.0
+TR22,2025-11-27,Normal,Metano,5.0
+TR22,2026-05-27,Normal,Metano,4.0
+TR22,2021-02-22,Normal,Monóxido de Carbono,686.0
+TR22,2021-08-04,Normal,Monóxido de Carbono,76.0
+TR22,2022-01-25,Normal,Monóxido de Carbono,163.0
+TR22,2022-07-07,Normal,Monóxido de Carbono,188.0
+TR22,2023-02-15,Normal,Monóxido de Carbono,332.0
+TR22,2023-07-28,Normal,Monóxido de Carbono,156.0
+TR22,2024-01-28,Normal,Monóxido de Carbono,560.0
+TR22,2024-05-13,Normal,Monóxido de Carbono,563.0
+TR22,2025-03-19,Normal,Monóxido de Carbono,682.0
+TR22,2025-11-27,Normal,Monóxido de Carbono,410.0
+TR22,2026-05-27,Normal,Monóxido de Carbono,356.0
+TR23,2023-05-24,Normal,Acetileno,0.0
+TR23,2023-11-03,Normal,Acetileno,0.0
+TR23,2024-05-21,Normal,Acetileno,0.0
+TR23,2024-11-14,Normal,Acetileno,0.0
+TR23,2025-04-10,Normal,Acetileno,0.0
+TR23,2026-05-12,Normal,Acetileno,0.0
+TR23,2023-05-24,Normal,Dióxido de Carbono,1312.0
+TR23,2023-11-03,Normal,Dióxido de Carbono,1898.0
+TR23,2024-05-21,Normal,Dióxido de Carbono,2018.0
+TR23,2024-11-14,Normal,Dióxido de Carbono,5693.0
+TR23,2025-04-10,Normal,Dióxido de Carbono,1461.0
+TR23,2026-05-12,Normal,Dióxido de Carbono,1724.0
+TR23,2023-05-24,Normal,Etano,0.0
+TR23,2023-11-03,Normal,Etano,0.0
+TR23,2024-05-21,Normal,Etano,0.0
+TR23,2024-11-14,Normal,Etano,0.0
+TR23,2025-04-10,Normal,Etano,0.0
+TR23,2026-05-12,Normal,Etano,0.0
+TR23,2023-05-24,Normal,Etileno,11.0
+TR23,2023-11-03,Normal,Etileno,14.0
+TR23,2024-05-21,Normal,Etileno,14.0
+TR23,2024-11-14,Normal,Etileno,16.0
+TR23,2025-04-10,Normal,Etileno,11.0
+TR23,2026-05-12,Normal,Etileno,13.0
+TR23,2023-05-24,Normal,Hidrogênio,7.0
+TR23,2023-11-03,Normal,Hidrogênio,5.0
+TR23,2024-05-21,Normal,Hidrogênio,3.0
+TR23,2024-11-14,Normal,Hidrogênio,72.0
+TR23,2025-04-10,Normal,Hidrogênio,6.0
+TR23,2026-05-12,Normal,Hidrogênio,2.0
+TR23,2023-05-24,Normal,Metano,1.0
+TR23,2023-11-03,Normal,Metano,2.0
+TR23,2024-05-21,Normal,Metano,2.0
+TR23,2024-11-14,Normal,Metano,2.0
+TR23,2025-04-10,Normal,Metano,2.0
+TR23,2026-05-12,Normal,Metano,3.0
+TR23,2023-05-24,Normal,Monóxido de Carbono,227.0
+TR23,2023-11-03,Normal,Monóxido de Carbono,261.0
+TR23,2024-05-21,Normal,Monóxido de Carbono,268.0
+TR23,2024-11-14,Normal,Monóxido de Carbono,385.0
+TR23,2025-04-10,Normal,Monóxido de Carbono,278.0
+TR23,2026-05-12,Normal,Monóxido de Carbono,190.0
+TR24,2019-02-12,Normal,Acetileno,0.0
+TR24,2019-09-03,Normal,Acetileno,0.0
+TR24,2020-02-12,Normal,Acetileno,0.0
+TR24,2020-09-10,Normal,Acetileno,0.0
+TR24,2021-03-02,Normal,Acetileno,0.0
+TR24,2021-08-26,Normal,Acetileno,0.0
+TR24,2022-03-09,Normal,Acetileno,0.0
+TR24,2022-08-17,Normal,Acetileno,0.0
+TR24,2024-08-24,Normal,Acetileno,0.0
+TR24,2025-02-10,Normal,Acetileno,0.0
+TR24,2025-09-02,Normal,Acetileno,0.0
+TR24,2026-02-09,Normal,Acetileno,0.0
+TR24,2019-02-12,Normal,Dióxido de Carbono,355.0
+TR24,2019-09-03,Normal,Dióxido de Carbono,1149.0
+TR24,2020-02-12,Normal,Dióxido de Carbono,1087.0
+TR24,2020-09-10,Normal,Dióxido de Carbono,1268.0
+TR24,2021-03-02,Normal,Dióxido de Carbono,1482.0
+TR24,2021-08-26,Normal,Dióxido de Carbono,1268.0
+TR24,2022-03-09,Normal,Dióxido de Carbono,2176.0
+TR24,2022-08-17,Normal,Dióxido de Carbono,1280.0
+TR24,2024-08-24,Normal,Dióxido de Carbono,1817.0
+TR24,2025-02-10,Normal,Dióxido de Carbono,1461.0
+TR24,2025-09-02,Normal,Dióxido de Carbono,1483.0
+TR24,2026-02-09,Normal,Dióxido de Carbono,2429.0
+TR24,2019-02-12,Normal,Etano,8.0
+TR24,2019-09-03,Normal,Etano,0.0
+TR24,2020-02-12,Normal,Etano,0.0
+TR24,2020-09-10,Normal,Etano,0.0
+TR24,2021-03-02,Normal,Etano,0.0
+TR24,2021-08-26,Normal,Etano,0.0
+TR24,2022-03-09,Normal,Etano,1.0
+TR24,2022-08-17,Normal,Etano,1.0
+TR24,2024-08-24,Normal,Etano,1.0
+TR24,2025-02-10,Normal,Etano,0.0
+TR24,2025-09-02,Normal,Etano,0.0
+TR24,2026-02-09,Normal,Etano,2.0
+TR24,2019-02-12,Normal,Etileno,0.0
+TR24,2019-09-03,Normal,Etileno,0.0
+TR24,2020-02-12,Normal,Etileno,0.0
+TR24,2020-09-10,Normal,Etileno,1.0
+TR24,2021-03-02,Normal,Etileno,0.0
+TR24,2021-08-26,Normal,Etileno,0.0
+TR24,2022-03-09,Normal,Etileno,0.0
+TR24,2022-08-17,Normal,Etileno,0.0
+TR24,2024-08-24,Normal,Etileno,1.0
+TR24,2025-02-10,Normal,Etileno,0.0
+TR24,2025-09-02,Normal,Etileno,0.0
+TR24,2026-02-09,Normal,Etileno,3.0
+TR24,2019-02-12,Normal,Hidrogênio,15.0
+TR24,2019-09-03,Normal,Hidrogênio,5.0
+TR24,2020-02-12,Normal,Hidrogênio,8.0
+TR24,2020-09-10,Normal,Hidrogênio,7.0
+TR24,2021-03-02,Normal,Hidrogênio,8.0
+TR24,2021-08-26,Normal,Hidrogênio,0.0
+TR24,2022-03-09,Normal,Hidrogênio,5.0
+TR24,2022-08-17,Normal,Hidrogênio,5.0
+TR24,2024-08-24,Normal,Hidrogênio,3.0
+TR24,2025-02-10,Normal,Hidrogênio,2.0
+TR24,2025-09-02,Normal,Hidrogênio,0.0
+TR24,2026-02-09,Normal,Hidrogênio,8.0
+TR24,2019-02-12,Normal,Metano,2.0
+TR24,2019-09-03,Normal,Metano,4.0
+TR24,2020-02-12,Normal,Metano,6.0
+TR24,2020-09-10,Normal,Metano,5.0
+TR24,2021-03-02,Normal,Metano,5.0
+TR24,2021-08-26,Normal,Metano,5.0
+TR24,2022-03-09,Normal,Metano,9.0
+TR24,2022-08-17,Normal,Metano,10.0
+TR24,2024-08-24,Normal,Metano,13.0
+TR24,2025-02-10,Normal,Metano,7.0
+TR24,2025-09-02,Normal,Metano,4.0
+TR24,2026-02-09,Normal,Metano,22.0
+TR24,2019-02-12,Normal,Monóxido de Carbono,108.0
+TR24,2019-09-03,Normal,Monóxido de Carbono,336.0
+TR24,2020-02-12,Normal,Monóxido de Carbono,465.0
+TR24,2020-09-10,Normal,Monóxido de Carbono,480.0
+TR24,2021-03-02,Normal,Monóxido de Carbono,507.0
+TR24,2021-08-26,Normal,Monóxido de Carbono,350.0
+TR24,2022-03-09,Normal,Monóxido de Carbono,583.0
+TR24,2022-08-17,Normal,Monóxido de Carbono,446.0
+TR24,2024-08-24,Normal,Monóxido de Carbono,595.0
+TR24,2025-02-10,Normal,Monóxido de Carbono,571.0
+TR24,2025-09-02,Normal,Monóxido de Carbono,90.0
+TR24,2026-02-09,Normal,Monóxido de Carbono,831.0
+TR25,2022-05-12,Normal,Acetileno,0.0
+TR25,2023-06-20,Normal,Acetileno,0.0
+TR25,2024-06-17,Normal,Acetileno,0.0
+TR25,2024-11-19,Normal,Acetileno,0.0
+TR25,2025-12-23,Normal,Acetileno,0.0
+TR25,2026-05-12,Normal,Acetileno,0.0
+TR25,2022-05-12,Normal,Dióxido de Carbono,59.0
+TR25,2023-06-20,Normal,Dióxido de Carbono,226.0
+TR25,2024-06-17,Normal,Dióxido de Carbono,1273.0
+TR25,2024-11-19,Normal,Dióxido de Carbono,3608.0
+TR25,2025-12-23,Normal,Dióxido de Carbono,1875.0
+TR25,2026-05-12,Normal,Dióxido de Carbono,1491.0
+TR25,2022-05-12,Normal,Etano,0.0
+TR25,2023-06-20,Normal,Etano,0.0
+TR25,2024-06-17,Normal,Etano,0.0
+TR25,2024-11-19,Normal,Etano,0.0
+TR25,2025-12-23,Normal,Etano,0.0
+TR25,2026-05-12,Normal,Etano,0.0
+TR25,2022-05-12,Normal,Etileno,0.0
+TR25,2023-06-20,Normal,Etileno,0.0
+TR25,2024-06-17,Normal,Etileno,0.0
+TR25,2024-11-19,Normal,Etileno,0.0
+TR25,2025-12-23,Normal,Etileno,0.0
+TR25,2026-05-12,Normal,Etileno,1.0
+TR25,2022-05-12,Normal,Hidrogênio,3.0
+TR25,2023-06-20,Normal,Hidrogênio,12.0
+TR25,2024-06-17,Normal,Hidrogênio,17.0
+TR25,2024-11-19,Normal,Hidrogênio,13.0
+TR25,2025-12-23,Normal,Hidrogênio,3.0
+TR25,2026-05-12,Normal,Hidrogênio,10.0
+TR25,2022-05-12,Normal,Metano,0.0
+TR25,2023-06-20,Normal,Metano,1.0
+TR25,2024-06-17,Normal,Metano,2.0
+TR25,2024-11-19,Normal,Metano,3.0
+TR25,2025-12-23,Normal,Metano,7.0
+TR25,2026-05-12,Normal,Metano,6.0
+TR25,2022-05-12,Normal,Monóxido de Carbono,11.0
+TR25,2023-06-20,Normal,Monóxido de Carbono,116.0
+TR25,2024-06-17,Normal,Monóxido de Carbono,767.0
+TR25,2024-11-19,Normal,Monóxido de Carbono,614.0
+TR25,2025-12-23,Normal,Monóxido de Carbono,412.0
+TR25,2026-05-12,Normal,Monóxido de Carbono,389.0
+TR26,2020-06-24,Normal,Acetileno,0.0
+TR26,2021-01-22,Normal,Acetileno,0.0
+TR26,2021-09-14,Normal,Acetileno,0.0
+TR26,2022-03-11,Normal,Acetileno,0.0
+TR26,2022-08-30,Normal,Acetileno,0.0
+TR26,2023-03-03,Normal,Acetileno,0.0
+TR26,2023-08-18,Normal,Acetileno,0.0
+TR26,2024-03-20,Normal,Acetileno,0.0
+TR26,2024-10-29,Normal,Acetileno,0.0
+TR26,2025-08-25,Normal,Acetileno,0.0
+TR26,2026-04-09,Atenção,Acetileno,0.0
+TR26,2020-06-24,Normal,Dióxido de Carbono,234.0
+TR26,2021-01-22,Normal,Dióxido de Carbono,289.0
+TR26,2021-09-14,Normal,Dióxido de Carbono,553.0
+TR26,2022-03-11,Normal,Dióxido de Carbono,828.0
+TR26,2022-08-30,Normal,Dióxido de Carbono,1878.0
+TR26,2023-03-03,Normal,Dióxido de Carbono,888.0
+TR26,2023-08-18,Normal,Dióxido de Carbono,933.0
+TR26,2024-03-20,Normal,Dióxido de Carbono,1485.0
+TR26,2024-10-29,Normal,Dióxido de Carbono,1478.0
+TR26,2025-08-25,Normal,Dióxido de Carbono,2228.0
+TR26,2026-04-09,Atenção,Dióxido de Carbono,3380.0
+TR26,2020-06-24,Normal,Etano,0.0
+TR26,2021-01-22,Normal,Etano,0.0
+TR26,2021-09-14,Normal,Etano,1.0
+TR26,2022-03-11,Normal,Etano,1.0
+TR26,2022-08-30,Normal,Etano,1.0
+TR26,2023-03-03,Normal,Etano,0.0
+TR26,2023-08-18,Normal,Etano,0.0
+TR26,2024-03-20,Normal,Etano,1.0
+TR26,2024-10-29,Normal,Etano,1.0
+TR26,2025-08-25,Normal,Etano,1.0
+TR26,2026-04-09,Atenção,Etano,1.0
+TR26,2020-06-24,Normal,Etileno,0.0
+TR26,2021-01-22,Normal,Etileno,0.0
+TR26,2021-09-14,Normal,Etileno,0.0
+TR26,2022-03-11,Normal,Etileno,0.0
+TR26,2022-08-30,Normal,Etileno,0.0
+TR26,2023-03-03,Normal,Etileno,0.0
+TR26,2023-08-18,Normal,Etileno,0.0
+TR26,2024-03-20,Normal,Etileno,0.0
+TR26,2024-10-29,Normal,Etileno,0.0
+TR26,2025-08-25,Normal,Etileno,0.0
+TR26,2026-04-09,Atenção,Etileno,21.0
+TR26,2020-06-24,Normal,Hidrogênio,4.0
+TR26,2021-01-22,Normal,Hidrogênio,5.0
+TR26,2021-09-14,Normal,Hidrogênio,4.0
+TR26,2022-03-11,Normal,Hidrogênio,20.0
+TR26,2022-08-30,Normal,Hidrogênio,18.0
+TR26,2023-03-03,Normal,Hidrogênio,8.0
+TR26,2023-08-18,Normal,Hidrogênio,13.0
+TR26,2024-03-20,Normal,Hidrogênio,12.0
+TR26,2024-10-29,Normal,Hidrogênio,11.0
+TR26,2025-08-25,Normal,Hidrogênio,11.0
+TR26,2026-04-09,Atenção,Hidrogênio,7.0
+TR26,2020-06-24,Normal,Metano,1.0
+TR26,2021-01-22,Normal,Metano,1.0
+TR26,2021-09-14,Normal,Metano,3.0
+TR26,2022-03-11,Normal,Metano,4.0
+TR26,2022-08-30,Normal,Metano,6.0
+TR26,2023-03-03,Normal,Metano,2.0
+TR26,2023-08-18,Normal,Metano,2.0
+TR26,2024-03-20,Normal,Metano,3.0
+TR26,2024-10-29,Normal,Metano,3.0
+TR26,2025-08-25,Normal,Metano,3.0
+TR26,2026-04-09,Atenção,Metano,3.0
+TR26,2020-06-24,Normal,Monóxido de Carbono,45.0
+TR26,2021-01-22,Normal,Monóxido de Carbono,44.0
+TR26,2021-09-14,Normal,Monóxido de Carbono,69.0
+TR26,2022-03-11,Normal,Monóxido de Carbono,132.0
+TR26,2022-08-30,Normal,Monóxido de Carbono,152.0
+TR26,2023-03-03,Normal,Monóxido de Carbono,42.0
+TR26,2023-08-18,Normal,Monóxido de Carbono,74.0
+TR26,2024-03-20,Normal,Monóxido de Carbono,129.0
+TR26,2024-10-29,Normal,Monóxido de Carbono,73.0
+TR26,2025-08-25,Normal,Monóxido de Carbono,85.0
+TR26,2026-04-09,Atenção,Monóxido de Carbono,481.0
+TR27,2021-05-04,Normal,Acetileno,0.0
+TR27,2021-05-04,Normal,Acetileno,0.0
+TR27,2021-05-04,Normal,Acetileno,0.0
+TR27,2021-11-18,Normal,Acetileno,0.0
+TR27,2021-11-18,Normal,Acetileno,0.0
+TR27,2021-11-18,Normal,Acetileno,0.0
+TR27,2022-11-06,Normal,Acetileno,0.0
+TR27,2023-04-20,Normal,Acetileno,0.0
+TR27,2023-10-22,Normal,Acetileno,0.0
+TR27,2024-04-23,Normal,Acetileno,0.0
+TR27,2024-10-28,Normal,Acetileno,0.0
+TR27,2025-04-28,Normal,Acetileno,0.0
+TR27,2025-10-24,Normal,Acetileno,0.0
+TR27,2026-04-23,Atenção,Acetileno,0.0
+TR27,2026-06-08,Atenção,Acetileno,0.0
+TR27,2021-05-04,Normal,Dióxido de Carbono,15998.0
+TR27,2021-05-04,Normal,Dióxido de Carbono,14903.0
+TR27,2021-05-04,Normal,Dióxido de Carbono,18553.0
+TR27,2021-11-18,Normal,Dióxido de Carbono,18553.0
+TR27,2021-11-18,Normal,Dióxido de Carbono,15998.0
+TR27,2021-11-18,Normal,Dióxido de Carbono,32081.0
+TR27,2022-11-06,Normal,Dióxido de Carbono,12490.0
+TR27,2023-04-20,Normal,Dióxido de Carbono,16204.0
+TR27,2023-10-22,Normal,Dióxido de Carbono,15481.0
+TR27,2024-04-23,Normal,Dióxido de Carbono,15014.0
+TR27,2024-10-28,Normal,Dióxido de Carbono,18295.0
+TR27,2025-04-28,Normal,Dióxido de Carbono,18487.0
+TR27,2025-10-24,Normal,Dióxido de Carbono,10504.0
+TR27,2026-04-23,Atenção,Dióxido de Carbono,17644.0
+TR27,2026-06-08,Atenção,Dióxido de Carbono,13731.0
+TR27,2021-05-04,Normal,Etano,0.0
+TR27,2021-05-04,Normal,Etano,6.0
+TR27,2021-05-04,Normal,Etano,7.0
+TR27,2021-11-18,Normal,Etano,1.0
+TR27,2021-11-18,Normal,Etano,0.0
+TR27,2021-11-18,Normal,Etano,0.0
+TR27,2022-11-06,Normal,Etano,1.0
+TR27,2023-04-20,Normal,Etano,0.0
+TR27,2023-10-22,Normal,Etano,0.0
+TR27,2024-04-23,Normal,Etano,3.0
+TR27,2024-10-28,Normal,Etano,4.0
+TR27,2025-04-28,Normal,Etano,2.0
+TR27,2025-10-24,Normal,Etano,4.0
+TR27,2026-04-23,Atenção,Etano,23.0
+TR27,2026-06-08,Atenção,Etano,20.0
+TR27,2021-05-04,Normal,Etileno,0.0
+TR27,2021-05-04,Normal,Etileno,0.0
+TR27,2021-05-04,Normal,Etileno,0.0
+TR27,2021-11-18,Normal,Etileno,0.0
+TR27,2021-11-18,Normal,Etileno,0.0
+TR27,2021-11-18,Normal,Etileno,0.0
+TR27,2022-11-06,Normal,Etileno,0.0
+TR27,2023-04-20,Normal,Etileno,0.0
+TR27,2023-10-22,Normal,Etileno,0.0
+TR27,2024-04-23,Normal,Etileno,0.0
+TR27,2024-10-28,Normal,Etileno,0.0
+TR27,2025-04-28,Normal,Etileno,0.0
+TR27,2025-10-24,Normal,Etileno,0.0
+TR27,2026-04-23,Atenção,Etileno,6.0
+TR27,2026-06-08,Atenção,Etileno,4.0
+TR27,2021-05-04,Normal,Hidrogênio,8.0
+TR27,2021-05-04,Normal,Hidrogênio,12.0
+TR27,2021-05-04,Normal,Hidrogênio,4.0
+TR27,2021-11-18,Normal,Hidrogênio,4.0
+TR27,2021-11-18,Normal,Hidrogênio,8.0
+TR27,2021-11-18,Normal,Hidrogênio,8.0
+TR27,2022-11-06,Normal,Hidrogênio,1.0
+TR27,2023-04-20,Normal,Hidrogênio,2.0
+TR27,2023-10-22,Normal,Hidrogênio,4.0
+TR27,2024-04-23,Normal,Hidrogênio,9.0
+TR27,2024-10-28,Normal,Hidrogênio,9.0
+TR27,2025-04-28,Normal,Hidrogênio,8.0
+TR27,2025-10-24,Normal,Hidrogênio,9.0
+TR27,2026-04-23,Atenção,Hidrogênio,12.0
+TR27,2026-06-08,Atenção,Hidrogênio,5.0
+TR27,2021-05-04,Normal,Metano,34.0
+TR27,2021-05-04,Normal,Metano,41.0
+TR27,2021-05-04,Normal,Metano,47.0
+TR27,2021-11-18,Normal,Metano,47.0
+TR27,2021-11-18,Normal,Metano,41.0
+TR27,2021-11-18,Normal,Metano,89.0
+TR27,2022-11-06,Normal,Metano,44.0
+TR27,2023-04-20,Normal,Metano,40.0
+TR27,2023-10-22,Normal,Metano,107.0
+TR27,2024-04-23,Normal,Metano,78.0
+TR27,2024-10-28,Normal,Metano,68.0
+TR27,2025-04-28,Normal,Metano,142.0
+TR27,2025-10-24,Normal,Metano,63.0
+TR27,2026-04-23,Atenção,Metano,89.0
+TR27,2026-06-08,Atenção,Metano,62.0
+TR27,2021-05-04,Normal,Monóxido de Carbono,448.0
+TR27,2021-05-04,Normal,Monóxido de Carbono,451.0
+TR27,2021-05-04,Normal,Monóxido de Carbono,457.0
+TR27,2021-11-18,Normal,Monóxido de Carbono,457.0
+TR27,2021-11-18,Normal,Monóxido de Carbono,451.0
+TR27,2021-11-18,Normal,Monóxido de Carbono,840.0
+TR27,2022-11-06,Normal,Monóxido de Carbono,332.0
+TR27,2023-04-20,Normal,Monóxido de Carbono,492.0
+TR27,2023-10-22,Normal,Monóxido de Carbono,402.0
+TR27,2024-04-23,Normal,Monóxido de Carbono,528.0
+TR27,2024-10-28,Normal,Monóxido de Carbono,498.0
+TR27,2025-04-28,Normal,Monóxido de Carbono,529.0
+TR27,2025-10-24,Normal,Monóxido de Carbono,345.0
+TR27,2026-04-23,Atenção,Monóxido de Carbono,470.0
+TR27,2026-06-08,Atenção,Monóxido de Carbono,284.0
+TR28,2020-06-24,Normal,Acetileno,0.0
+TR28,2021-01-22,Normal,Acetileno,0.0
+TR28,2021-09-15,Normal,Acetileno,0.0
+TR28,2022-03-11,Normal,Acetileno,0.0
+TR28,2022-08-29,Normal,Acetileno,0.0
+TR28,2023-03-03,Normal,Acetileno,0.0
+TR28,2023-08-18,Normal,Acetileno,0.0
+TR28,2024-03-19,Normal,Acetileno,0.0
+TR28,2024-10-29,Normal,Acetileno,0.0
+TR28,2025-08-25,Normal,Acetileno,0.0
+TR28,2026-04-09,Atenção,Acetileno,1.0
+TR28,2020-06-24,Normal,Dióxido de Carbono,214.0
+TR28,2021-01-22,Normal,Dióxido de Carbono,255.0
+TR28,2021-09-15,Normal,Dióxido de Carbono,385.0
+TR28,2022-03-11,Normal,Dióxido de Carbono,527.0
+TR28,2022-08-29,Normal,Dióxido de Carbono,885.0
+TR28,2023-03-03,Normal,Dióxido de Carbono,404.0
+TR28,2023-08-18,Normal,Dióxido de Carbono,410.0
+TR28,2024-03-19,Normal,Dióxido de Carbono,712.0
+TR28,2024-10-29,Normal,Dióxido de Carbono,629.0
+TR28,2025-08-25,Normal,Dióxido de Carbono,842.0
+TR28,2026-04-09,Atenção,Dióxido de Carbono,2697.0
+TR28,2020-06-24,Normal,Etano,0.0
+TR28,2021-01-22,Normal,Etano,0.0
+TR28,2021-09-15,Normal,Etano,1.0
+TR28,2022-03-11,Normal,Etano,1.0
+TR28,2022-08-29,Normal,Etano,1.0
+TR28,2023-03-03,Normal,Etano,0.0
+TR28,2023-08-18,Normal,Etano,0.0
+TR28,2024-03-19,Normal,Etano,0.0
+TR28,2024-10-29,Normal,Etano,1.0
+TR28,2025-08-25,Normal,Etano,0.0
+TR28,2026-04-09,Atenção,Etano,4.0
+TR28,2020-06-24,Normal,Etileno,0.0
+TR28,2021-01-22,Normal,Etileno,0.0
+TR28,2021-09-15,Normal,Etileno,0.0
+TR28,2022-03-11,Normal,Etileno,0.0
+TR28,2022-08-29,Normal,Etileno,0.0
+TR28,2023-03-03,Normal,Etileno,0.0
+TR28,2023-08-18,Normal,Etileno,0.0
+TR28,2024-03-19,Normal,Etileno,0.0
+TR28,2024-10-29,Normal,Etileno,0.0
+TR28,2025-08-25,Normal,Etileno,0.0
+TR28,2026-04-09,Atenção,Etileno,19.0
+TR28,2020-06-24,Normal,Hidrogênio,15.0
+TR28,2021-01-22,Normal,Hidrogênio,8.0
+TR28,2021-09-15,Normal,Hidrogênio,8.0
+TR28,2022-03-11,Normal,Hidrogênio,12.0
+TR28,2022-08-29,Normal,Hidrogênio,20.0
+TR28,2023-03-03,Normal,Hidrogênio,15.0
+TR28,2023-08-18,Normal,Hidrogênio,5.0
+TR28,2024-03-19,Normal,Hidrogênio,11.0
+TR28,2024-10-29,Normal,Hidrogênio,12.0
+TR28,2025-08-25,Normal,Hidrogênio,12.0
+TR28,2026-04-09,Atenção,Hidrogênio,13.0
+TR28,2020-06-24,Normal,Metano,4.0
+TR28,2021-01-22,Normal,Metano,3.0
+TR28,2021-09-15,Normal,Metano,5.0
+TR28,2022-03-11,Normal,Metano,5.0
+TR28,2022-08-29,Normal,Metano,8.0
+TR28,2023-03-03,Normal,Metano,4.0
+TR28,2023-08-18,Normal,Metano,4.0
+TR28,2024-03-19,Normal,Metano,3.0
+TR28,2024-10-29,Normal,Metano,5.0
+TR28,2025-08-25,Normal,Metano,5.0
+TR28,2026-04-09,Atenção,Metano,17.0
+TR28,2020-06-24,Normal,Monóxido de Carbono,80.0
+TR28,2021-01-22,Normal,Monóxido de Carbono,95.0
+TR28,2021-09-15,Normal,Monóxido de Carbono,84.0
+TR28,2022-03-11,Normal,Monóxido de Carbono,127.0
+TR28,2022-08-29,Normal,Monóxido de Carbono,184.0
+TR28,2023-03-03,Normal,Monóxido de Carbono,86.0
+TR28,2023-08-18,Normal,Monóxido de Carbono,102.0
+TR28,2024-03-19,Normal,Monóxido de Carbono,161.0
+TR28,2024-10-29,Normal,Monóxido de Carbono,87.0
+TR28,2025-08-25,Normal,Monóxido de Carbono,112.0
+TR28,2026-04-09,Atenção,Monóxido de Carbono,987.0
+TR29,2022-04-02,Normal,Acetileno,0.0
+TR29,2022-07-01,Normal,Acetileno,1.0
+TR29,2022-07-29,Normal,Acetileno,0.0
+TR29,2022-09-25,Normal,Acetileno,0.0
+TR29,2022-12-05,Normal,Acetileno,0.0
+TR29,2023-03-24,Normal,Acetileno,0.0
+TR29,2023-08-23,Normal,Acetileno,0.0
+TR29,2023-12-21,Normal,Acetileno,0.0
+TR29,2024-04-22,Normal,Acetileno,0.5
+TR29,2024-08-29,Normal,Acetileno,0.4
+TR29,2025-02-20,Normal,Acetileno,0.0
+TR29,2025-07-24,Normal,Acetileno,0.4
+TR29,2026-01-07,Normal,Acetileno,0.6
+TR29,2026-04-10,Atenção,Acetileno,1.0
+TR29,2022-04-02,Normal,Dióxido de Carbono,3949.0
+TR29,2022-07-01,Normal,Dióxido de Carbono,6820.0
+TR29,2022-07-29,Normal,Dióxido de Carbono,4597.0
+TR29,2022-09-25,Normal,Dióxido de Carbono,1871.0
+TR29,2022-12-05,Normal,Dióxido de Carbono,1282.0
+TR29,2023-03-24,Normal,Dióxido de Carbono,2614.0
+TR29,2023-08-23,Normal,Dióxido de Carbono,4175.0
+TR29,2023-12-21,Normal,Dióxido de Carbono,7317.0
+TR29,2024-04-22,Normal,Dióxido de Carbono,4887.5
+TR29,2024-08-29,Normal,Dióxido de Carbono,3989.2
+TR29,2025-02-20,Normal,Dióxido de Carbono,6800.2
+TR29,2025-07-24,Normal,Dióxido de Carbono,4948.0
+TR29,2026-01-07,Normal,Dióxido de Carbono,7298.2
+TR29,2026-04-10,Atenção,Dióxido de Carbono,5430.4
+TR29,2022-04-02,Normal,Etano,0.0
+TR29,2022-07-01,Normal,Etano,0.0
+TR29,2022-07-29,Normal,Etano,0.0
+TR29,2022-09-25,Normal,Etano,0.0
+TR29,2022-12-05,Normal,Etano,0.0
+TR29,2023-03-24,Normal,Etano,0.0
+TR29,2023-08-23,Normal,Etano,0.0
+TR29,2023-12-21,Normal,Etano,0.0
+TR29,2024-04-22,Normal,Etano,0.2
+TR29,2024-08-29,Normal,Etano,0.1
+TR29,2025-02-20,Normal,Etano,0.0
+TR29,2025-07-24,Normal,Etano,0.0
+TR29,2026-01-07,Normal,Etano,0.0
+TR29,2026-04-10,Atenção,Etano,1.2
+TR29,2022-04-02,Normal,Etileno,3.0
+TR29,2022-07-01,Normal,Etileno,4.0
+TR29,2022-07-29,Normal,Etileno,3.0
+TR29,2022-09-25,Normal,Etileno,1.0
+TR29,2022-12-05,Normal,Etileno,1.0
+TR29,2023-03-24,Normal,Etileno,0.0
+TR29,2023-08-23,Normal,Etileno,0.0
+TR29,2023-12-21,Normal,Etileno,4.0
+TR29,2024-04-22,Normal,Etileno,4.8
+TR29,2024-08-29,Normal,Etileno,3.2
+TR29,2025-02-20,Normal,Etileno,2.0
+TR29,2025-07-24,Normal,Etileno,1.0
+TR29,2026-01-07,Normal,Etileno,0.0
+TR29,2026-04-10,Atenção,Etileno,7.7
+TR29,2022-04-02,Normal,Hidrogênio,181.0
+TR29,2022-07-01,Normal,Hidrogênio,233.0
+TR29,2022-07-29,Normal,Hidrogênio,213.0
+TR29,2022-09-25,Normal,Hidrogênio,58.0
+TR29,2022-12-05,Normal,Hidrogênio,54.0
+TR29,2023-03-24,Normal,Hidrogênio,94.0
+TR29,2023-08-23,Normal,Hidrogênio,125.0
+TR29,2023-12-21,Normal,Hidrogênio,143.0
+TR29,2024-04-22,Normal,Hidrogênio,159.2
+TR29,2024-08-29,Normal,Hidrogênio,170.0
+TR29,2025-02-20,Normal,Hidrogênio,183.6
+TR29,2025-07-24,Normal,Hidrogênio,146.1
+TR29,2026-01-07,Normal,Hidrogênio,191.4
+TR29,2026-04-10,Atenção,Hidrogênio,151.6
+TR29,2022-04-02,Normal,Metano,33.0
+TR29,2022-07-01,Normal,Metano,55.0
+TR29,2022-07-29,Normal,Metano,37.0
+TR29,2022-09-25,Normal,Metano,13.0
+TR29,2022-12-05,Normal,Metano,9.0
+TR29,2023-03-24,Normal,Metano,31.0
+TR29,2023-08-23,Normal,Metano,20.0
+TR29,2023-12-21,Normal,Metano,31.0
+TR29,2024-04-22,Normal,Metano,30.7
+TR29,2024-08-29,Normal,Metano,34.8
+TR29,2025-02-20,Normal,Metano,21.6
+TR29,2025-07-24,Normal,Metano,33.1
+TR29,2026-01-07,Normal,Metano,31.2
+TR29,2026-04-10,Atenção,Metano,42.0
+TR29,2022-04-02,Normal,Monóxido de Carbono,382.0
+TR29,2022-07-01,Normal,Monóxido de Carbono,584.0
+TR29,2022-07-29,Normal,Monóxido de Carbono,433.0
+TR29,2022-09-25,Normal,Monóxido de Carbono,164.0
+TR29,2022-12-05,Normal,Monóxido de Carbono,129.0
+TR29,2023-03-24,Normal,Monóxido de Carbono,270.0
+TR29,2023-08-23,Normal,Monóxido de Carbono,557.0
+TR29,2023-12-21,Normal,Monóxido de Carbono,741.0
+TR29,2024-04-22,Normal,Monóxido de Carbono,688.5
+TR29,2024-08-29,Normal,Monóxido de Carbono,461.5
+TR29,2025-02-20,Normal,Monóxido de Carbono,1002.2
+TR29,2025-07-24,Normal,Monóxido de Carbono,544.8
+TR29,2026-01-07,Normal,Monóxido de Carbono,876.1
+TR29,2026-04-10,Atenção,Monóxido de Carbono,749.2
+TR30,2021-05-04,Normal,Acetileno,0.0
+TR30,2021-05-04,Normal,Acetileno,0.0
+TR30,2021-05-04,Normal,Acetileno,0.0
+TR30,2021-11-19,Normal,Acetileno,0.0
+TR30,2021-11-19,Normal,Acetileno,0.0
+TR30,2021-11-19,Normal,Acetileno,0.0
+TR30,2022-11-06,Normal,Acetileno,0.0
+TR30,2023-04-23,Normal,Acetileno,0.0
+TR30,2023-10-22,Normal,Acetileno,0.0
+TR30,2024-04-23,Normal,Acetileno,0.0
+TR30,2024-10-28,Normal,Acetileno,0.0
+TR30,2025-04-28,Normal,Acetileno,0.0
+TR30,2025-10-24,Normal,Acetileno,0.0
+TR30,2026-04-23,Atenção,Acetileno,0.0
+TR30,2026-06-08,Atenção,Acetileno,0.0
+TR30,2021-05-04,Normal,Dióxido de Carbono,10410.0
+TR30,2021-05-04,Normal,Dióxido de Carbono,11227.0
+TR30,2021-05-04,Normal,Dióxido de Carbono,16465.0
+TR30,2021-11-19,Normal,Dióxido de Carbono,16465.0
+TR30,2021-11-19,Normal,Dióxido de Carbono,11227.0
+TR30,2021-11-19,Normal,Dióxido de Carbono,22763.0
+TR30,2022-11-06,Normal,Dióxido de Carbono,5245.0
+TR30,2023-04-23,Normal,Dióxido de Carbono,6178.0
+TR30,2023-10-22,Normal,Dióxido de Carbono,13996.0
+TR30,2024-04-23,Normal,Dióxido de Carbono,17247.0
+TR30,2024-10-28,Normal,Dióxido de Carbono,12432.0
+TR30,2025-04-28,Normal,Dióxido de Carbono,13314.0
+TR30,2025-10-24,Normal,Dióxido de Carbono,8209.0
+TR30,2026-04-23,Atenção,Dióxido de Carbono,15341.0
+TR30,2026-06-08,Atenção,Dióxido de Carbono,13112.0
+TR30,2021-05-04,Normal,Etano,10.0
+TR30,2021-05-04,Normal,Etano,4.0
+TR30,2021-05-04,Normal,Etano,11.0
+TR30,2021-11-19,Normal,Etano,11.0
+TR30,2021-11-19,Normal,Etano,4.0
+TR30,2021-11-19,Normal,Etano,16.0
+TR30,2022-11-06,Normal,Etano,12.0
+TR30,2023-04-23,Normal,Etano,12.0
+TR30,2023-10-22,Normal,Etano,13.0
+TR30,2024-04-23,Normal,Etano,20.0
+TR30,2024-10-28,Normal,Etano,8.0
+TR30,2025-04-28,Normal,Etano,19.0
+TR30,2025-10-24,Normal,Etano,10.0
+TR30,2026-04-23,Atenção,Etano,34.0
+TR30,2026-06-08,Atenção,Etano,31.0
+TR30,2021-05-04,Normal,Etileno,0.0
+TR30,2021-05-04,Normal,Etileno,0.0
+TR30,2021-05-04,Normal,Etileno,0.0
+TR30,2021-11-19,Normal,Etileno,0.0
+TR30,2021-11-19,Normal,Etileno,0.0
+TR30,2021-11-19,Normal,Etileno,0.0
+TR30,2022-11-06,Normal,Etileno,0.0
+TR30,2023-04-23,Normal,Etileno,0.0
+TR30,2023-10-22,Normal,Etileno,0.0
+TR30,2024-04-23,Normal,Etileno,0.0
+TR30,2024-10-28,Normal,Etileno,0.0
+TR30,2025-04-28,Normal,Etileno,0.0
+TR30,2025-10-24,Normal,Etileno,0.0
+TR30,2026-04-23,Atenção,Etileno,4.0
+TR30,2026-06-08,Atenção,Etileno,3.0
+TR30,2021-05-04,Normal,Hidrogênio,6.0
+TR30,2021-05-04,Normal,Hidrogênio,10.0
+TR30,2021-05-04,Normal,Hidrogênio,13.0
+TR30,2021-11-19,Normal,Hidrogênio,13.0
+TR30,2021-11-19,Normal,Hidrogênio,6.0
+TR30,2021-11-19,Normal,Hidrogênio,12.0
+TR30,2022-11-06,Normal,Hidrogênio,7.0
+TR30,2023-04-23,Normal,Hidrogênio,26.0
+TR30,2023-10-22,Normal,Hidrogênio,12.0
+TR30,2024-04-23,Normal,Hidrogênio,27.0
+TR30,2024-10-28,Normal,Hidrogênio,17.0
+TR30,2025-04-28,Normal,Hidrogênio,24.0
+TR30,2025-10-24,Normal,Hidrogênio,14.0
+TR30,2026-04-23,Atenção,Hidrogênio,16.0
+TR30,2026-06-08,Atenção,Hidrogênio,12.0
+TR30,2021-05-04,Normal,Metano,59.0
+TR30,2021-05-04,Normal,Metano,55.0
+TR30,2021-05-04,Normal,Metano,78.0
+TR30,2021-11-19,Normal,Metano,78.0
+TR30,2021-11-19,Normal,Metano,59.0
+TR30,2021-11-19,Normal,Metano,79.0
+TR30,2022-11-06,Normal,Metano,76.0
+TR30,2023-04-23,Normal,Metano,112.0
+TR30,2023-10-22,Normal,Metano,101.0
+TR30,2024-04-23,Normal,Metano,136.0
+TR30,2024-10-28,Normal,Metano,85.0
+TR30,2025-04-28,Normal,Metano,160.0
+TR30,2025-10-24,Normal,Metano,66.0
+TR30,2026-04-23,Atenção,Metano,111.0
+TR30,2026-06-08,Atenção,Metano,100.0
+TR30,2021-05-04,Normal,Monóxido de Carbono,398.0
+TR30,2021-05-04,Normal,Monóxido de Carbono,312.0
+TR30,2021-05-04,Normal,Monóxido de Carbono,496.0
+TR30,2021-11-19,Normal,Monóxido de Carbono,496.0
+TR30,2021-11-19,Normal,Monóxido de Carbono,398.0
+TR30,2021-11-19,Normal,Monóxido de Carbono,623.0
+TR30,2022-11-06,Normal,Monóxido de Carbono,321.0
+TR30,2023-04-23,Normal,Monóxido de Carbono,339.0
+TR30,2023-10-22,Normal,Monóxido de Carbono,498.0
+TR30,2024-04-23,Normal,Monóxido de Carbono,584.0
+TR30,2024-10-28,Normal,Monóxido de Carbono,411.0
+TR30,2025-04-28,Normal,Monóxido de Carbono,521.0
+TR30,2025-10-24,Normal,Monóxido de Carbono,293.0
+TR30,2026-04-23,Atenção,Monóxido de Carbono,354.0
+TR30,2026-06-08,Atenção,Monóxido de Carbono,317.0
